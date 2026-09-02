@@ -1,0 +1,974 @@
+br {
+ clear:left;
+}
+
+/*
+fieldset,input,textarea,select {
+ margin-top: 5px;
+ margin-bottom:5px;
+}*/
+
+/****** modifiche nuovo sito DF **************/
+hr.dividi{
+ margin: 0;
+ padding: 0;
+ color: #749EB1;
+ height: 1px;
+}
+
+p.testo {
+    text-align: left;
+	margin: 5px 0px 0px 20px;
+	font-size: 95%;
+	}
+	
+p.title2bis {
+    /*float: right;*/
+    font-size: 100%;
+    padding: 10px 0;
+    text-align: left;
+    width: 100%;
+	}
+	
+p.esplica{
+ color: #003C7A;
+ width: 80%;
+ margin-bottom: 10px;
+}
+
+html > body p.esplica{        
+ margin-left:8%;
+}
+
+p.mess {
+ color: #8C2011;
+ padding-bottom: 10px;
+ text-align: center;
+}
+
+p.mess1 {
+ color: #8C2011;
+ margin: 10px 0 0 20px;
+ text-align: left;
+}
+
+p.elenchi {
+margin: 10px 0 10px 20px;
+}
+
+p.ricerca {
+ text-align: center;
+ color: #8C2011;
+ margin: 15px;
+ padding: 0;
+}
+
+p.prospetto {
+ color: #8C2011;
+ margin: 15px 0;
+ padding: 0;
+}
+
+p.irpefanni{
+ margin-left:16px;
+ text-align: left;
+ font-weight: bold;
+ color: #003C7A;
+ padding: 10px;
+}
+p.irpefanni1{
+ margin-left:25px;
+}
+
+p.irpefanni2{
+ margin-left:25px;
+ margin-top: 25px;
+}
+
+p.irpefanni3{
+ margin-left:25px;
+ /*margin-top: 25px;*/
+}
+h2.irpefanni{
+ font-size: 110%;
+ margin-left:16px;
+ margin-bottom:0px;
+ text-align: left;
+ font-weight: bold;
+ color: #003C7A;
+ padding: 10px;
+}
+
+h1.applicazioni{
+ font-size: 130%;
+ margin-bottom: 10px;
+}
+
+h2.applicaz{
+ font-size: 100%;
+ margin: 20px;
+}
+
+
+label.ins {
+ text-align: right;
+ float:left;
+ font-weight: bold;
+ /*font-size: 0.9em;*/
+ border: 0px;
+ color: #003C7A;
+ padding: 5px;
+ width: 27%;
+ margin-top: 10px;
+}
+
+label.anno {
+ text-align: right;
+ font-size: 0.8em;
+}
+
+label.trib {
+ text-align: right;
+ float:left;
+ font-weight: bold;
+ border: 0px;
+ color: #003C7A;
+ width: 30%;
+ margin: 5px 15px 0 0px;
+}
+
+input.campo{
+ width:40%; 
+ float:left;
+ margin-top: 10px;
+ margin-right: 0;
+}
+
+input.sub1{
+ font-weight: normal;
+ margin: 10px;
+ padding-left: 0px;
+ float: left;
+}
+
+input#sub3{
+ font-size: 1em;
+ margin: 20px;
+}
+
+input.elenco{
+ border: 2px solid #406D97 ;
+ border-style: outset;
+ color: #003C7A;
+ padding: 5px;
+ background-color: #DEDFEC;
+ font-weight: bold;
+ margin-bottom: 10px;
+}
+
+p#messout {
+ color: #005D00;
+ font-size: 1em;
+  text-align: center;
+}
+
+div.totale{
+  width: 98%;
+  background-color: #FFFFFF;
+  padding: 10px;
+  margin: 0 auto;  
+}
+
+div.gen{
+  text-align: center;
+  width: 100%;
+  margin: 10px auto;
+}
+
+div.sin{
+ float:left;
+ width: 28%;
+ margin-left: 5%;
+}
+
+div.sinlista{
+ float:left;
+ width: 74%;
+ margin: 10px 0 0 16px;
+ text-align: left;
+ font-weight: bold;
+ color: #003C7A;
+ padding: 5px;
+}
+
+div.dxlista{
+ text-align: right;
+ margin-right: 30px;
+}
+
+div.sinp{
+ float:left;
+ width: 35%;
+ margin-left: 30px;
+ margin-top: 20px;
+}
+
+div.sinistra {
+    font-size: 1em;
+    margin: 0 auto;
+    text-align: left;
+    width: 70%;
+	padding-bottom: 10px;
+}
+
+div.regione{
+  border: 1px solid #749EB1;
+  background-color: #F4F4F4; 
+  width: 70%;
+  text-align: left;
+  margin: 0 auto;
+}
+
+div.provincia{
+  border: 1px solid #749EB1; 
+  margin: 20px 0px 0px 0px; 
+  padding: 0px;
+  text-align: left;
+  width: 54%;
+  margin: 10px auto;
+  padding: 10px;
+  background-color: #F4F4F4; 
+}
+
+div.nuova{
+  text-align: center;
+  width: 100%;
+  margin: 0 auto; 
+}
+
+div.dxp{
+ width: 57%;
+ text-align: right;
+}
+html > body div.dxp {        
+ margin-left:40%;
+}
+
+div.lista{
+ float:left;
+ width: 99%;
+ text-align: left;
+ font-size: 1.0em;
+ font-weight: bold;
+ color: #003C7A;
+ padding: 0px 0px 10px 0px;
+}
+
+table.tabella2colonne {
+    border: 1px solid #103262;
+    padding-left: 5px;
+    width: 97%;
+	border-collapse: collapse;
+    border-spacing: 0;
+	margin-left: 20px;	
+	color: rgb(80, 80, 80);
+}
+
+
+table.tabella1 {
+    border: none;
+    padding-left: 5px;
+	margin-left: 20px;	
+	color: rgb(80, 80, 80);
+}
+
+th{
+ text-align: center;
+ border: 1px solid #749EB1;
+ color: #8C2011;
+ font-weight: bold;
+ font-size: 0.9em;
+ background-color: rgb(225, 225, 225);
+}
+
+th.imu1{
+ width: 15%;
+}
+
+th.imu2{
+ width: 15% !important;
+}
+
+td{
+ text-align: left;
+ border: 1px solid #749EB1;
+ font-weight: normal;
+ font-size: 0.9em;
+}
+td.elenchi{
+ border: none;
+ font-size: 0.9em;
+padding: 0 10px 0 0; 
+}
+
+td#com2{
+ background-color: #F4F4F4;
+ font-size: 1em;
+ padding: 3px; 
+}
+
+td#com1{
+ background-color: #F9F9F9;
+ font-size: 1em;
+ padding: 3px; 
+}
+
+td#prov2{
+ text-align: center;
+ background-color: #F4F4F4;
+ font-size: 1em; 
+}
+
+td#prov1{
+ text-align: center;
+ background-color: #F9F9F9;
+font-size: 1em; 
+}
+
+td.blue{
+ color: #003C7A;
+ font-size:1em;
+ padding-left: 5px;
+}
+td.blue1{
+ color: #003C7A;
+ font-size:1em;
+ text-align: center;
+}
+
+a.color1{
+ color: #003C7A;
+ text-decoration: underline;
+}
+
+a.color2{
+ color: #005D00;
+ /*margin: 10px;*/
+ text-decoration: underline;
+}
+
+a.beni{
+ text-decoration: underline;
+}
+
+a.beni1{
+ text-decoration: underline;
+  font-weight: bold;
+}
+
+ div.sin1{
+ margin-top: 20px;
+ margin-left: 5%;
+}
+
+a#elenchi{
+ border: 2px solid #406D97 ;
+ border-style: outset;
+ background-color: #DEDFEC;
+ text-decoration: none;
+ font-size: 0.8em;
+ color: #003C7A;
+ padding: 5px;
+}
+a.elenchi{
+ text-decoration: underline;
+}
+
+select.anni{
+width: 20%;
+float: left;
+font-size: 1em;
+margin: 0;
+}
+
+select.anniirpef{
+font-size: 0.7em;
+margin-right: 10px;
+}
+
+img.elenchigen{
+border-width: 0;
+float: left;
+text-decoration: none;
+margin-right: 10px;
+}
+
+#cerca {
+border:3px solid #808080;
+font-size:130%;
+padding:20px 0 12px;
+text-align:center;
+margin:15px;
+}
+
+ul.elenchi{
+margin:16px;
+}
+
+li.elenchi1{
+padding:5px;
+}
+
+p.messerr {
+ margin: 30px 0;
+ color: #800000;
+ font-size: 1.2em;
+ text-align: center;
+}
+
+/************** fine modifiche **********/
+ 
+/******** per statistiche stat_db_new ****/
+ div.sin1{
+ margin-top: 20px;
+ margin-left: 5%;
+}
+
+ td.level1{
+ width: 65%;
+ padding: 0px;
+}
+
+ td.anno{
+ text-align: center;
+ padding: 0px;
+}
+
+ td.level2{
+ width: 65%;
+ padding: 0px;
+ padding-left: 30px;
+}
+
+td.level3{
+ width: 65%;
+ padding: 0px;
+ padding-left: 60px;
+ }
+ 
+span.inv{
+position:absolute;
+left:0px;
+top:-500px;
+width:1px;
+height:1px;
+overflow:hidden;
+}
+
+table.stat1{
+ font-size: 1.0em;
+ width: 96%;
+ border: none;
+ padding: 0px;
+ text-align: center;
+ margin-top: 10px;
+ margin-bottom: 0px;
+ margin-left: 3%;
+ background-color:#FFFFFF;
+}
+
+td.altre{
+ width: 65%;
+ /*font-weight: bold; */
+ padding-left: 10px;
+}
+
+th.stattitsin{
+ width: 55%;
+ text-align: left;
+  height:15px;
+}
+
+h2.stath2{
+ color: #00486E;
+font-size: 1em;
+}
+
+h3.stath3{
+border:0 none;
+color:#00486E;
+font-size: 1em;
+margin:10px 5px 0 30px;
+padding:0;
+}
+
+div.sinstat{
+ text-align: left;
+ margin-left: 5%;
+ padding-top: 20px; 
+}
+/******** fine statistiche *****/
+
+/*********** inizio beni sequestrati*******/
+a.beni{
+ text-decoration: underline;
+}
+
+a.beni1{
+ text-decoration: underline;
+  font-weight: bold;
+}
+
+ div.beni{
+ margin-top: 30px;
+}
+
+ div.beni1{
+ margin: 30px 15px;
+}
+
+p.beni {
+ margin-top: 15px;
+}
+
+th.beni{
+text-align: center;
+}
+
+li.beni {
+ padding: 4px 0;
+}
+
+/*********** fine beni sequestrati*******/
+
+/********* altri tributi ******/
+div.tributo{
+   border: 1px solid #8c2011;
+   margin: 20px 0 0 20px;
+   padding: 0 10px 10px;
+   width: 94%;
+}
+
+div.sinlistatrib{
+ float:left;
+ width: 74%;
+ margin: 10px 0 0 20px;
+ text-align: left;
+ font-weight: bold;
+ color: #003C7A;
+ padding: 5px;
+}
+
+div.sceltatrib{
+    float: left;
+    margin: 0px 0px 20px;
+    width: 100%;
+}
+
+label.altritrib {
+ text-align: right;
+ float:left;
+ font-weight: bold;
+ border: 0px;
+ color: #003C7A;
+ width: 25%;
+ margin: 5px 15px 0 0px;
+}
+
+div.tributi{
+  border: 1px solid #749EB1; 
+  margin: 20px 0px 0px 0px; 
+  padding: 0px;
+  text-align: left;
+  width: 80%;
+  margin: 10px auto;
+  padding: 10px;
+  background-color: #F4F4F4; 
+}
+
+div.altritrib{
+ font-weight: bold;
+ font-style: italic;
+ text-align: left;
+ width: 99%;
+ float:left;
+ margin-left:16px;
+ color: #003C7A;
+ padding: 0 5px 5px 5px;
+ font-size: 1.0em;
+}
+
+select.trib {
+    float: left;
+    font-size: 0.8em;
+    margin: 0;
+}
+
+input.selanno{
+	float: left;
+	margin-left: 20px;
+}
+
+div.resp {
+    color: #003c7a;
+    float: left;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 15px 0 0 0;
+    text-align: left;
+    width: 99%;
+	}
+
+/********* fine altri tributi *****/
+
+/********
+
+
+div.anno{
+  border: 1px solid #749EB1;
+  background-color: #F4F4F4; 
+  margin: 0px;
+  padding: 15px;
+  text-align: left;
+  width: 66%;
+  margin: 0 auto;
+}
+
+
+div.nuova{
+  text-align: center;
+  width: 100%;
+  margin: 0 auto; 
+}
+
+div.tutte{
+  text-align: right;
+  margin: 0 auto; 
+  float: right;
+}
+
+
+
+form.webmail {
+  width: 100%;
+  text-align: center;
+  padding: 0px;
+  margin: 0px;
+}
+
+div.err{
+  border: 1px solid #749EB1;
+  background-color: #F4F4F4; 
+  margin: 0 auto;
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #8C2011;
+  width: 66%;
+}
+
+
+
+
+
+html > body p.esplica{        
+ margin-left:8%;
+}
+
+
+p.nota{
+font-size: 1.2em;
+}
+
+p.ricerca1 {
+ text-align: center;
+ color: #8C2011;
+ margin: 0px 0px 10px 0px;
+ padding-bottom: 10px;
+ line-height: 2em;
+}
+
+
+
+input#sub2{
+ font-size: 0.9em;
+ font-weight: normal;
+ margin: 8px;
+}
+
+
+
+input.sub4{
+ font-size: 1.2em;
+ font-weight: normal;
+ margin: 18px 38px 0px 0px;
+}
+
+
+
+
+div.dx{
+ text-align: right ;
+ padding-top: 2em;
+}
+html > body div.dx {        
+ margin-left:22%;
+}
+
+div.dxp{
+ width: 57%;
+ text-align: right;
+}
+html > body div.dxp {        
+ margin-left:40%;
+}
+
+table#lista{
+ background-color: #F9F9F9; 
+ width: 98%;
+ margin: 5px 0px 15px 3px;
+ padding: 5px;
+ text-align: center;
+ float: right;
+}
+html > body table#lista {        
+  margin: 0px;
+}
+
+
+table.tabella2colonne th.secondaria {
+width:10%;
+}
+
+
+table.tabella2colonne th.principale {
+width:90%;
+}
+
+
+th.listap{
+ width: 8%;
+}
+
+
+th#outsmall{
+ width: 10%;
+ font-size:1.4em;
+}
+
+
+
+
+
+
+#anni{
+font-size:100%;
+font-weight: bold;
+}
+
+
+
+td.colore0{
+ color: #005D00;
+
+ font-weight: bold;
+ width: 10%; 
+}
+
+td.colore1{
+ color: #505050;
+
+ width: 10%; 
+}
+
+
+
+
+
+
+td#colore0{
+ color: #005D00;
+ font-size:1.4em;
+ font-weight: bold;
+ width: 10%; 
+}
+
+td#colore1{
+ color: #505050;
+ font-size:1.4em;
+}
+
+td#blue{
+ color: #003C7A;
+ font-size:1.4em;
+}
+
+
+
+
+
+
+
+div.lista1{
+ float:left;
+ width: 99%;
+ text-align: left;
+ font-size: 1.0em;
+ font-weight: bold;
+ color: #003C7A;
+ padding: 5px;
+ font-size: 1.5em;
+}
+
+
+
+div.sinlista1{
+ float:left;
+ margin-left:15%;
+ text-align: left;
+ font-size: 1.5em;
+ font-weight: bold;
+ color: #003C7A;
+ padding: 5px;
+}
+div.sinlista2{
+ float:left;
+ margin-left:8.5%;
+ text-align: left;
+ font-size: 1.4em;
+ font-weight: bold;
+ color: #003C7A;
+ padding: 5px;
+}
+
+
+
+img.stemma{
+text-align: right;
+margin-left: 80%;
+}
+
+
+
+a#elenchi{
+ border: 2px solid #406D97 ;
+ border-style: outset;
+ background-color: #DEDFEC;
+ text-decoration: none;
+ font-size: 0.8em;
+ color: #003C7A;
+ padding: 5px;
+ margin-left: 25px;
+}
+div.sinistra{ 
+  width: 70%;
+  text-align: left;
+  margin: 0 auto;
+  font-size: 1.2em;
+}
+*/
+/************* campi solo per IMU e IUC*******************/
+/*div.sinistra1{ 
+  width: 71%;
+  text-align: left;
+  margin: 0 auto;
+  font-size: 0.8em;
+}
+
+th#imu1{
+ width: 15%;
+}
+
+th#imu2{
+ width: 8%;
+}
+th#imu3{
+ width: 8%;
+ text-align: center;
+}
+td#blue1{
+ color: #003C7A;
+ font-size:1.4em;
+ text-align: center;
+}
+
+
+*/
+
+
+/************* campi solo per delibere ici *******************/
+/*
+div.anno{
+  border: 1px solid #749EB1;
+  background-color: #F4F4F4; 
+  margin: 0px;
+  padding: 15px;
+  text-align: left;
+  width: 66%;
+  margin: 0 auto;
+}
+
+
+
+div.inseriticampo{
+ color: #005D00;
+ font-size: 1.8em; 
+ font-weight: bold;
+ text-align: left;
+ float: right;
+ width: 45%;
+}
+
+select{
+padding-left: 0px;
+margin: 10px 20px 0px 5px;
+
+font-size: 1.5em;
+}
+*/
+
+/************ solo per altri tributi **********************/
+/*select.tributi{
+width: 70%;
+float: left;
+}
+*/
+/********** campi solo per distribuzione addizionale irpef *************/
+/*
+h2.distr{
+ color:#003C7A;
+ margin: 5px 0px;
+ padding: 0;
+}
+
+p.inizio {
+ font-size: 0.8em; 
+ text-align: left;
+ color: #003C7A;
+ margin: 0;
+ padding: 0;
+}
+
+a#nota1{
+ font-size: 1.4em;
+text-decoration: underline; 
+}
+*/
+/**************** solo per statistiche distribuz-addirpef *********/
+/*
+div#note{
+ border: 1px solid #739CB5;
+ font-size: 1.2em; 
+ background-color: #F7F7F7; 
+ text-align: center;
+ width: 20%;
+ padding: 5px;
+ margin: 0 auto;
+}
+
+a#nota{
+ color:#000000;
+ text-decoration: none;
+}
+*/

@@ -1,0 +1,36 @@
+Struttura della folder del progetto 
+
+|
+
+Raccolta delle fonti
+
+|
+
+Estrazione delle fonti in un Excel chiamato Parametri.csv
+
+|
+
+Repo GitHub Pubblica e connessione a Folder del progetto
+
+|
+
+Sviluppo del prototipo Iterazione 1
+
+|
+
+Commit e Push su Repo GitHub
+
+|
+
+Caricamento su Pythonanywhere
+
+|
+
+Access Token per caricare aggiornamenti da GitHub a Pythonanywhere
+
+|
+
+Test Iterazione 1
+
+
+

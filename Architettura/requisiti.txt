@@ -1,0 +1,13 @@
+Sempre valido:
+-App da caricare su Pythonanywhere
+-Possibilità di aggiornare l'app attraverso repository GitHub
+
+
+Prototipo Iterazione 1:
+-L'app deve rispettare la richiesta del prototipo:
+Un prototipo funzionante in un caso semplice e standard, si assume dunque inizialmente:
+- il dipendente è un impiegato a tempo indeterminato.
+- il dipendente vive a Milano.
+- il dipendente non ha nessun tipo di agevolazione particolare.
+
+-Il database con le logiche di calcolo deve essere apribile dall'app con una UI user friendly e, data la variabilità, i parametri devono essere modificabili.

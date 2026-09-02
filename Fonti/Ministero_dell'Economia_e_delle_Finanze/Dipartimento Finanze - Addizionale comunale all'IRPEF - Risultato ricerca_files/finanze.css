@@ -1,0 +1,183 @@
+@import url("./uikit/mef.css");
+
+
+.new_graphic #menu-service {
+	float: right;
+}
+
+.new_graphic #menu-service ul {
+	margin-bottom: 0px;
+	margin-top: 10px;
+}
+
+.new_graphic #menu-service li:not(:last-child) {
+	border-right: 1px solid #1c2024;
+}
+
+.new_graphic #menu-service li > a {
+	color: inherit;
+	padding: 0px 15px 0px 11px;
+}
+
+.new_graphic #menu-service_ridotto {
+	float: right;
+}
+
+.new_graphic #menu-service_ridotto ul {
+	margin-bottom: 0px;
+	margin-top: 10px;
+}
+
+.new_graphic #menu-service_ridotto li:not(:last-child) {
+	border-right: 1px solid #1c2024;
+}
+
+.new_graphic #menu-service_ridotto li > a {
+	color: inherit;
+	padding: 0px 15px 0px 11px;
+}
+
+.new_graphic #background-blu {
+	background-color: #004080;
+}
+
+.new_graphic #carousel-indicators2 { display: none!important; }
+.new_graphic .carousel-indicators .active { background-color: #0059a9!important; border: 1px solid #0059a9!important; }
+
+.new_graphic .myCarousel { border: 1px solid #cbccce !important }
+
+#flexcontent-menu div.row { margin-right: 0px; }
+#flexcontent-menu div.row > div { padding-right: 0px; }
+
+.new_graphic .card { max-width: 100%; box-shadow: 0 3px 3px 0 rgba(0,0,0,.1); }
+.new_graphic .myCarousel { box-shadow: 0 3px 3px 0 rgba(0,0,0,.1); }
+
+.new_graphic .card.panel p.link { min-height: auto; }
+.new_graphic .card.descrizione { margin-bottom: 25px; margin-top: 25px; }
+
+.new_graphic #menu-top .navbar-nav li:first-child > a,.new_graphic #menu-top .navbar-nav li:last-child > a {
+		white-space: nowrap;
+}
+
+.new_graphic #main-finanze .myCarousel h1 a { font-size: 80%!important; }
+.new_graphic #main-finanze #agenzia-header h1 { color: #FFFFFF;}
+.new_graphic #main-finanze #agenzia-header p > a, .new_graphic #main-finanze #agenzia-header p > a:hover,.new_graphic #main-finanze #agenzia-header p > a:visited {
+	color: #0058e6!important;
+}
+
+
+.new_graphic #main-finanze #agenzia-header ul li a { line-height: normal; height: auto; }
+
+.new_graphic .card.descrizione div.desc { border-right: none; }
+
+.new_graphic .card.descrizione { border-right: 1px #cfcdce solid; }
+
+#btnOk, #btnInfo { height: auto!important; }
+
+@media (min-width: 1360px) {
+	.ridotto a.nav-link.px-lg-3.dropdown-toggle {
+		padding-left: 0.4rem!important;
+		padding-right: 0.4rem!important;
+		background-color: #fff;
+		color: #093697 !important;
+		font-size: 0.95rem !important;
+	}
+}
+
+@media (min-width: 768px) {
+	.ridotto .navbar {
+		/*border-bottom: 2px solid #c4cdd6;*/
+		border-bottom: 2px solid #093697 !important;
+	}
+
+	.new_graphic a:focus, .new_graphic .btn:focus, .new_graphic .carousel-indicators li:focus {
+		/*outline: 2px dotted #007bff !important;*/
+		outline-offset: 1px;
+	}
+}
+
+@media (min-width: 992px) {
+	.new_graphic .navbar-expand-lg .navbar-nav .nav-link:focus, .new_graphic .navbar-expand-lg .navbar-nav .nav-link:hover {
+		margin-bottom: -.25rem;
+	}
+}
+
+@media only screen and (min-width: 1260px) {
+	.new_graphic .myCarousel article .contenuto { width: calc(97% - 320px)!important; }
+}
+
+
+@media only screen and (min-width: 992px) and (max-width: 1259px) {
+	.new_graphic .myCarousel article .contenuto { width: calc(97% - 320px)!important; }
+}
+
+#flexcontent-menu .navbar {
+	box-shadow: none;
+}
+
+#flexcontent-menu #background-blu, #flexcontent-menu > div {
+	background-color: transparent;
+	box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15);
+}
+
+.new_graphic .menu nav {
+	left: 0;
+}
+
+.ridotto #flexcontent-menu .container-fluid {
+	max-width: 2000px;
+	background-color: #fff;
+}
+
+.seguici ul li a .fab {
+	color: white !important;
+}
+
+.seguici ul li a .fab:hover {
+	color: #849ACB !important;
+}
+
+.seguici ul li a img {
+	color: white !important;
+}
+
+.seguici ul li a img:hover {
+	background-color:rgb(9,54,151);opacity:0.6;
+}  
+
+.seguici ul li {
+	border-right: none !important;
+} 
+
+#agenzia-header {
+	border-bottom: 1px solid transparent !important;
+}
+
+.new_graphic #menu-top .dropdown-menu, .new_graphic .megamenu-menu {
+	background-color: white !important;
+}
+
+ul.social_seguici li { border-right: none!important}
+ul.social_seguici li a { color: #fff!important}
+ul.social_seguici li a:hover { color: rgb(255, 255, 255, .5)!important}
+#page-footer ul.social_seguici { margin-top: 0px!important;}
+
+#page-footer ul.seguici {
+	margin-top: 0;
+}
+
+.new_graphic img {
+	vertical-align: text-top;
+}
+
+.new_graphic #page-header .btn-primary.btn-alt {
+	background-color: #093697 !important;
+    border-color: #0a2644;
+    color: #fff !important;
+}
+
+.new_graphic #page-header .btn-primary.btn-alt:hover {
+	background-color: #fff !important;
+    border-color: #fff;
+    color: #0a2644 !important;
+}

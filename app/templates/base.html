@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Jet HR - Simulatore Retribuzione Netta{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-container">
+      <div class="brand">
+        <a href="{{ url_for('main.index') }}" class="logo-link">
+          <span class="logo-text">Jet<strong>HR</strong></span>
+          <span class="badge badge-sub">Product Builder Prototype</span>
+        </a>
+      </div>
+      <nav class="nav-links">
+        <a href="{{ url_for('main.index') }}" class="nav-item {% if request.endpoint == 'main.index' %}active{% endif %}">Calcolatore</a>
+        <a href="{{ url_for('admin.parameters_view') }}" class="nav-item {% if request.endpoint == 'admin.parameters_view' %}active{% endif %}">Gestione Parametri DB</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    {% include "components/_alerts.html" %}
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>Raffaele Colamarino - AI Builder Candidate</p>
+    </div>
+  </footer>
+
+  {% block scripts %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <rect width="200" height="60" fill="#11150a" rx="8"/>
+  <text x="25" y="40" font-family="system-ui, sans-serif" font-size="28" font-weight="800" fill="#ffffff">Jet</text>
+  <rect x="75" y="16" width="50" height="30" fill="#dfeb57" rx="4"/>
+  <text x="83" y="39" font-family="system-ui, sans-serif" font-size="24" font-weight="900" fill="#11150a">HR</text>
+</svg>

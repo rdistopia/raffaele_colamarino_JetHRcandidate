@@ -1,0 +1,382 @@
+/* jorge - table, p - background colors */
+.new_graphic #contenuti-pagina .testo p.arancio, .new_graphic h2.arancio {all:inherit;background-color:#EC651D;color:#000000;}
+.new_graphic #contenuti-pagina .testo p.arancio {margin-bottom: 10px; padding: 10px;}
+.new_graphic #contenuti-pagina .testo p.fucsia, .new_graphic h2.fucsia {all:inherit;background-color:#C10551;color:#FFFFFF;}
+.new_graphic #contenuti-pagina .testo p.fucsia {margin-bottom: 10px; padding: 10px;}
+.new_graphic #contenuti-pagina .testo p.grigio1, .new_graphic h2.grigio1 {all:inherit;background-color:#6E6E6E;color:#FFFFFF;}
+.new_graphic #contenuti-pagina .testo p.grigio1 {margin-bottom: 10px; padding: 10px;}
+.new_graphic #contenuti-pagina .testo p.blu-scuro, .new_graphic h2.blu-scuro {all:inherit;background-color:#15477A;color:#FFFFFF;}
+.new_graphic #contenuti-pagina .testo p.blu-scuro {margin-bottom: 10px; padding: 10px;}
+.new_graphic #contenuti-pagina .testo p.blu1, .new_graphic h2.blu1 {all:inherit;background-color:#0066CC;color:#FFFFFF;}
+.new_graphic #contenuti-pagina .testo p.blu1 {margin-bottom: 10px; padding: 10px;}
+.new_graphic #contenuti-pagina .testo p.celeste-polvere, .new_graphic h2.celeste-polvere {all:inherit;background-color:#EFF6FD;color:#444466;}
+.new_graphic #contenuti-pagina .testo p.celeste-polvere {margin-bottom: 10px; padding: 10px;}
+.new_graphic #contenuti-pagina .testo p.grigio-chiaro, .new_graphic h2.grigio-chiaro {all:inherit;background-color:#EAEAEA;color:#5A4F44;}
+.new_graphic #contenuti-pagina .testo p.grigio-chiaro {margin-bottom: 10px; padding: 10px;}
+.new_graphic #contenuti-pagina .testo p.grigio-chiarissimo, .new_graphic h2.grigio-chiarissimo {all:inherit;background-color:#FAFAFA;color:#5A4F44;}
+.new_graphic #contenuti-pagina .testo p.grigio-chiarissimo {margin-bottom: 10px; padding: 10px;}
+.new_graphic #contenuti-pagina .testo p.grigio-scuro, .new_graphic h2.grigio-scuro {all:inherit;background-color:#30373D;color:#40BDE0;}
+.new_graphic #contenuti-pagina .testo p.grigio-scuro {margin-bottom: 10px; padding: 10px;}
+.new_graphic #contenuti-pagina .testo p.verde-acqua, .new_graphic h2.verde-acqua {all:inherit;background-color:#06838F;color:#FFFFFF;}
+.new_graphic #contenuti-pagina .testo p.verde-acqua {margin-bottom: 10px; padding: 10px;}
+.new_graphic #contenuti-pagina .testo p.verde-brillante, .new_graphic h2.verde-brillante {all:inherit;background-color:#01CC00;color:#000000;}
+.new_graphic #contenuti-pagina .testo p.verde-brillante {margin-bottom: 10px; padding: 10px;}
+.new_graphic #contenuti-pagina .testo p.verde-chiaro, .new_graphic h2.verde-chiaro {all:inherit;background-color:#41D940;color:#15477A;}
+.new_graphic #contenuti-pagina .testo p.verde-chiaro {margin-bottom: 10px; padding: 10px;}
+.new_graphic #contenuti-pagina .testo p.verde, .new_graphic h2.verde {all:inherit;background-color:#32824E;color:#FFFFFF;}
+.new_graphic #contenuti-pagina .testo p.verde {margin-bottom: 10px; padding: 10px;}
+
+.new_graphic #main-finanze #contenuti-pagina h2.arancio a,.new_graphic #main-finanze #contenuti-pagina h2.arancio a:hover {color:#000000;}
+.new_graphic #main-finanze #contenuti-pagina h2.fucsia a,.new_graphic #main-finanze #contenuti-pagina h2.fucsia a:hover {color:#FFFFFF;}
+.new_graphic #main-finanze #contenuti-pagina h2.grigio1 a,.new_graphic #main-finanze #contenuti-pagina h2.grigio1 a:hover. {color:#FFFFFF;}
+.new_graphic #main-finanze #contenuti-pagina h2.blu-scuro a,.new_graphic #main-finanze #contenuti-pagina h2.blu-scuro a:hover {color:#FFFFFF;}
+.new_graphic #main-finanze #contenuti-pagina h2.blu1 a,.new_graphic #main-finanze #contenuti-pagina h2.blu1 a:hover {color:#FFFFFF;}
+.new_graphic #main-finanze #contenuti-pagina h2.celeste-polvere a,.new_graphic #main-finanze #contenuti-pagina h2.celeste-polvere a:hover. {color:#444466;}
+.new_graphic #main-finanze #contenuti-pagina h2.grigio-chiaro a,.new_graphic #main-finanze #contenuti-pagina h2.grigio-chiaro a:hover {color:#5A4F44;}
+.new_graphic #main-finanze #contenuti-pagina h2.grigio-chiarissimo a,.new_graphic #main-finanze #contenuti-pagina h2.grigio-chiarissimo a:hover {color:#5A4F44;}
+.new_graphic #main-finanze #contenuti-pagina h2.grigio-scuro a,.new_graphic #main-finanze #contenuti-pagina h2.grigio-scuro a:hover {color:#40BDE0;}
+.new_graphic #main-finanze #contenuti-pagina h2.verde-acqua a,.new_graphic #main-finanze #contenuti-pagina h2.verde-acqua a:hover {color:#FFFFFF;}
+.new_graphic #main-finanze #contenuti-pagina h2.verde-brillante a,.new_graphic #main-finanze #contenuti-pagina h2.verde-brillante a:hover {color:#000000;}
+.new_graphic #main-finanze #contenuti-pagina h2.verde-chiaro a,.new_graphic #main-finanze #contenuti-pagina h2.verde-chiaro a:hover {color:#15477A;}
+.new_graphic #main-finanze #contenuti-pagina h2.verde a,.new_graphic #main-finanze #contenuti-pagina h2.verde a:hover {color:#FFFFFF;}
+
+.new_graphic #main-finanze table.arancio *{background-color:#EC651D;color:#000000;}
+.new_graphic #main-finanze table.fucsia *{background-color:#C10551;color:#FFFFFF;}
+.new_graphic #main-finanze table.grigio1 *{background-color:#6E6E6E;color:#FFFFFF;}
+.new_graphic #main-finanze table.blu-scuro *{background-color:#15477A;color:#FFFFFF;}
+.new_graphic #main-finanze table.blu *{background-color:#0066CC;color:#FFFFFF;}
+.new_graphic #main-finanze table.blu1 *{background-color:#0066CC;color:#FFFFFF;}
+.new_graphic #main-finanze table.celeste-polvere *{background-color:#EFF6FD;color:#444466;}
+.new_graphic #main-finanze table.grigio-chiaro *{background-color:#EAEAEA;color:#5A4F44;}
+.new_graphic #main-finanze table.grigio-chiarissimo *{background-color:#FAFAFA;color:#5A4F44;}
+.new_graphic #main-finanze table.grigio-scuro *{background-color:#30373D;color:#40BDE0;}
+.new_graphic #main-finanze table.verde-acqua *{background-color:#06838F;color:#FFFFFF;}
+.new_graphic #main-finanze table.verde-brillante *{background-color:#01CC00;color:#000000;}
+.new_graphic #main-finanze table.verde-chiaro *{background-color:#41D940;color:#15477A;}
+.new_graphic #main-finanze table.verde *{background-color:#32824E;color:#FFFFFF;}
+
+
+/* jorge -  Titolo sottolineato con colore(il primo border-bottom verrï¿½ attivato a javascript) */
+/*tolgo la sottolineatura grigia al titolo h2*/
+.new_graphic h2.titolo-sottolineato-arancio {border-bottom: none;}
+.new_graphic h2.titolo-sottolineato-fucsia {border-bottom: none;}
+.new_graphic h2.titolo-sottolineato-grigio {border-bottom: none;}
+.new_graphic h2.titolo-sottolineato-blu-scuro {border-bottom: none;}
+.new_graphic h2.titolo-sottolineato-blu {border-bottom: none;}
+.new_graphic h2.titolo-sottolineato-celeste-polvere {border-bottom: none;}
+.new_graphic h2.titolo-sottolineato-grigio-chiaro {border-bottom: none;}
+.new_graphic h2.titolo-sottolineato-grigio-chiarissimo {border-bottom: none;}
+.new_graphic h2.titolo-sottolineato-grigio-scuro {border-bottom: none;}
+.new_graphic h2.titolo-sottolineato-verde-acqua {border-bottom: none;}
+.new_graphic h2.titolo-sottolineato-verde-brillante {border-bottom: none;}
+.new_graphic h2.titolo-sottolineato-verde-chiaro {border-bottom: none;}
+.new_graphic h2.titolo-sottolineato-verde {border-bottom: none;}
+
+/*metto la sottolineatura colorata al titolo h2*/
+.new_graphic h2.titolo-sottolineato-arancio {border-bottom: 2px solid #EC651D;display:inline;padding-bottom: 5px;}
+.new_graphic h2.titolo-sottolineato-fucsia {border-bottom: 2px solid #C10551;display:inline;padding-bottom: 5px;}
+.new_graphic h2.titolo-sottolineato-grigio {border-bottom: 2px solid #6E6E6E;display:inline;padding-bottom: 5px;}
+.new_graphic h2.titolo-sottolineato-blu-scuro {border-bottom: 2px solid #15477A;display:inline;padding-bottom: 5px;}
+.new_graphic h2.titolo-sottolineato-blu {border-bottom: 2px solid #0066CC;display:inline;padding-bottom: 5px;}
+.new_graphic h2.titolo-sottolineato-celeste-polvere {border-bottom: 2px solid #EFF6FD;display:inline;padding-bottom: 5px;}
+.new_graphic h2.titolo-sottolineato-grigio-chiaro {border-bottom: 2px solid #EAEAEA;display:inline;padding-bottom: 5px;}
+.new_graphic h2.titolo-sottolineato-grigio-chiarissimo {border-bottom: 2px solid #FAFAFA;display:inline;padding-bottom: 5px;}
+.new_graphic h2.titolo-sottolineato-grigio-scuro {border-bottom: 2px solid #30373D;display:inline;padding-bottom: 5px;}
+.new_graphic h2.titolo-sottolineato-verde-acqua {border-bottom: 2px solid #06838F;display:inline;padding-bottom: 5px;}
+.new_graphic h2.titolo-sottolineato-verde-brillante {border-bottom: 2px solid #01CC00;display:inline;padding-bottom: 5px;}
+.new_graphic h2.titolo-sottolineato-verde-chiaro {border-bottom: 2px solid #41D940;display:inline;padding-bottom: 5px;}
+.new_graphic h2.titolo-sottolineato-verde {border-bottom: 2px solid #32824E;display:inline;padding-bottom: 5px;}
+.new_graphic #contenuti-pagina h2.block{display:block;}
+
+.new_graphic #main-finanze #contenuti-pagina h2.titolo-colore-fucsia, .new_graphic #main-finanze #contenuti-pagina h2.titolo-colore-fucsia a, .new_graphic #main-finanze #contenuti-pagina h2.titolo-colore-fucsia a:visited, .new_graphic #main-finanze #contenuti-pagina h2.titolo-colore-fucsia a:hover {color: #C10551;}
+.new_graphic #main-finanze #contenuti-pagina #contenuti h2.titolo-colore-fucsia a { text-decoration: none!important;}
+.new_graphic #main-finanze #contenuti-pagina #contenuti h2.titolo-colore-fucsia a:hover { text-decoration: underline!important;}
+.new_graphic #main-finanze #contenuti-pagina h2.titolo-colore-grigio, .new_graphic #main-finanze #contenuti-pagina h2.titolo-colore-grigio a, .new_graphic #main-finanze #contenuti-pagina h2.titolo-colore-grigio a:visited, .new_graphic #main-finanze #contenuti-pagina h2.titolo-colore-grigio a:hover {color: #6E6E6E;}
+.new_graphic #main-finanze #contenuti-pagina #contenuti h2.titolo-colore-grigio a { text-decoration: none!important;}
+.new_graphic #main-finanze #contenuti-pagina #contenuti h2.titolo-colore-grigio a:hover { text-decoration: underline!important;}
+.new_graphic #main-finanze #contenuti-pagina h2.titolo-colore-blu, .new_graphic #main-finanze #contenuti-pagina h2.titolo-colore-blu a, .new_graphic #main-finanze #contenuti-pagina h2.titolo-colore-blu a:visited, .new_graphic #main-finanze #contenuti-pagina h2.titolo-colore-blu a:hover {color: #0066CC;}
+.new_graphic #main-finanze #contenuti-pagina #contenuti h2.titolo-colore-blu a { text-decoration: none!important;}
+.new_graphic #main-finanze #contenuti-pagina #contenuti h2.titolo-colore-blu a:hover { text-decoration: underline!important;}
+.new_graphic #main-finanze #contenuti-pagina h2.titolo-colore-blu-scuro, .new_graphic #main-finanze #contenuti-pagina h2.titolo-colore-blu-scuro a, .new_graphic #main-finanze #contenuti-pagina h2.titolo-colore-blu-scuro a:visited, .new_graphic #main-finanze #contenuti-pagina h2.titolo-colore-blu-scuro a:hover {color: #15477A;}
+.new_graphic #main-finanze #contenuti-pagina #contenuti h2.titolo-colore-blu-scuro a { text-decoration: none!important;}
+.new_graphic #main-finanze #contenuti-pagina #contenuti h2.titolo-colore-blu-scuro a:hover { text-decoration: underline!important;}
+.new_graphic #main-finanze #contenuti-pagina h2.titolo-colore-verde-acqua, .new_graphic #main-finanze #contenuti-pagina h2.titolo-colore-verde-acqua a, .new_graphic #main-finanze #contenuti-pagina h2.titolo-colore-verde-acqua a:visited, .new_graphic #main-finanze #contenuti-pagina h2.titolo-colore-verde-acqua a:hover {color: #06838F;}
+.new_graphic #main-finanze #contenuti-pagina #contenuti h2.titolo-colore-verde-acqua a { text-decoration: none!important;}
+.new_graphic #main-finanze #contenuti-pagina #contenuti h2.titolo-colore-verde-acqua a:hover { text-decoration: underline!important;}
+.new_graphic #main-finanze #contenuti-pagina h2.titolo-colore-verde, .new_graphic #main-finanze #contenuti-pagina h2.titolo-colore-verde a, .new_graphic #main-finanze #contenuti-pagina h2.titolo-colore-verde a:visited, .new_graphic #main-finanze #contenuti-pagina h2.titolo-colore-verde a:hover {color: #32824E;}
+.new_graphic #main-finanze #contenuti-pagina #contenuti h2.titolo-colore-verde a { text-decoration: none!important;}
+.new_graphic #main-finanze #contenuti-pagina #contenuti h2.titolo-colore-verde a:hover { text-decoration: underline!important;}
+
+.new_graphic p.riga-arancio, .new_graphic h2.riga-arancio {border-top: 2px solid #EC651D; padding: 10px; }
+.new_graphic p.riga-fucsia, .new_graphic h2.riga-fucsia {border-top: 2px solid #C10551; padding: 10px;}
+.new_graphic p.riga-grigio, .new_graphic h2.riga-grigio {border-top: 2px solid #6E6E6E; padding: 10px;}
+.new_graphic p.riga-blu-scuro, .new_graphic h2.riga-blu-scuro {border-top: 2px solid #15477A; padding: 10px;}
+.new_graphic p.riga-blu, .new_graphic h2.riga-blu {border-top: 2px solid #0066CC; padding: 10px;}
+.new_graphic p.riga-celeste-polvere, .new_graphic h2.riga-celeste-polvere {border-top: 2px solid #EFF6FD; padding: 10px;}
+.new_graphic p.riga-grigio-chiaro, .new_graphic h2.riga-grigio-chiaro {border-top: 2px solid #EAEAEA; padding: 10px;}
+.new_graphic p.riga-grigio-chiarissimo, .new_graphic h2.riga-grigio-chiarissimo {border-top: 2px solid #FAFAFA; padding: 10px;}
+.new_graphic p.riga-grigio-scuro, .new_graphic h2.riga-grigio-scuro {border-top: 2px solid #30373D; padding: 10px;}
+.new_graphic p.riga-verde-acqua, .new_graphic h2.riga-verde-acqua {border-top: 2px solid #06838F; padding: 10px;}
+.new_graphic p.riga-verde-brillante, .new_graphic h2.riga-verde-brillante {border-top: 2px solid #01CC00; padding: 10px;}
+.new_graphic p.riga-verde-chiaro, .new_graphic h2.riga-verde-chiaro {border-top: 2px solid #41D940; padding: 10px;}
+p.riga-verde, .new_graphic h2.riga-verde {border-top: 2px solid #32824E; padding: 10px;}
+
+.new_graphic img.border-grigio-chiaro{border:1px solid #ccc;}
+
+
+
+/* TABLE */
+.new_graphic table {
+margin: 30px auto;
+border-collapse: collapse;
+border: 1px solid #cccccc;
+width: 100%;
+}
+
+.new_graphic table caption {
+border-bottom: 1px #3b7fbd solid;
+background-color: #0059a9;
+padding: 20px;
+font-family: 'Titillium',Helvetica,sans-serif; font-size: 130%; color: #fff; text-align: left; text-transform: none;
+}
+
+.new_graphic .verde table caption {
+border-bottom: 1px #88d09f solid;
+background-color: #32824e;
+}
+
+.new_graphic .fucsia table caption {
+border-bottom: 1px #d74e86 solid;
+background-color: #c10551;
+}
+
+.new_graphic .verde-acqua table caption {
+border-bottom: 1px #0ea3b0 solid;
+background-color: #06838f;
+}
+
+.new_graphic .grigio table caption {
+border-bottom: 1px #ec6530 solid;
+background-color: #d63e03;
+}
+
+.new_graphic table .sx {
+text-align: left;
+}
+
+.new_graphic table .cx {
+text-align: center;
+}
+
+.new_graphic table .dx {
+text-align: right;
+}
+
+.new_graphic table td, .new_graphic table th
+{
+  border-right:1px solid #cccccc;
+  border-bottom:1px solid #cccccc;
+  text-align:center;
+  vertical-align:top;
+  padding: 20px 5px 10px 5px;
+}
+
+.new_graphic #contenuti-pagina .bloccoTesto table td p, 
+.new_graphic #contenuti-pagina .bloccoTesto table th p, 
+.new_graphic #contenuti-pagina .bloccoTesto table td a, 
+.new_graphic #contenuti-pagina .bloccoTesto table th a,
+.new_graphic #contenuti-pagina .bloccoTesto table caption p,
+.new_graphic table td p, 
+.new_graphic table th p, 
+.new_graphic table td a, 
+.new_graphic table th a,
+.new_graphic table caption p
+{
+  margin:0;
+  padding:0;
+}
+
+.new_graphic table td:last-child, .new_graphic table th:last-child
+{
+  border-right:0px;
+}
+
+.new_graphic table tr:nth-child(even) {
+/*background-color: #fafafa;*/
+background-color: #ededed;
+}
+
+
+.new_graphic table tbody th,
+.new_graphic table td {
+font-weight: normal; 
+}
+
+.new_graphic table td ul {
+  list-style-tipe: disc;
+}
+
+.new_graphic table caption {
+    border-bottom: 1px #3b7fbd solid;
+    background-color: #0059a9;
+    padding: 20px;
+    font-family: 'Titillium',Helvetica,sans-serif; font-size: 130%; color: #fff; text-align: center; text-transform: none;
+}
+.new_graphic .grigio table caption {
+    border-bottom: 1px #3b7fbd solid;
+    background-color: #0059a9;
+}
+
+.new_graphic table caption {
+    background-color: #15477A;
+    border-bottom: 1px solid #3b7fbd;
+}
+
+.new_graphic table caption {
+    text-transform: none;
+    text-align: center;
+}
+
+/* table */
+.new_graphic table.grid tbody th,
+.new_graphic table.grid td {
+border:1px solid #cccccc;
+}
+
+.new_graphic table.grid tr:nth-child(even) {
+background-color: #eaeaea;
+}
+
+.new_graphic table#amm_trasp tr:nth-child(2n) {
+    background-color: transparent;
+}
+.new_graphic table#amm_trasp  tbody th, .new_graphic table#amm_trasp td {
+    border: 1px solid #cccccc;
+}
+
+/* table cols */
+.new_graphic table.gray tr td:nth-child(odd), .new_graphic table.gray tr th:nth-child(odd)
+{
+  background: #fff;
+}
+
+.new_graphic table.gray tr td:nth-child(even), .new_graphic table.gray tr th:nth-child(even)
+{
+  background: #eaeaea;
+}
+
+.new_graphic table tr td.white, .new_graphic table.gray tr td.white,
+.new_graphic table tr th.white, .new_graphic table.gray tr th.white
+{
+  background: #fff;
+}
+
+.new_graphic table tr td.gray, .new_graphic table.gray tr td.gray,
+.new_graphic table tr th.gray, .new_graphic table.gray tr th.gray
+{
+  background: #eaeaea;
+}
+.new_graphic table tr td.fucsia, .new_graphic table.gray tr td.fucsia,
+.new_graphic table tr th.fucsia, .new_graphic table.gray tr th.fucsia
+{
+  background-color: #c10551;
+  color: #FFF;
+}
+
+.new_graphic table td ul {
+  list-style: outside;
+}
+.new_graphic table td ul li {
+  list-style-type: disc;
+  margin-bottom: 15px;
+}
+/* Font size tabelle */
+.new_graphic table.gray, .new_graphic table  {
+  font-size: 120%;
+}
+
+/* TABLE */
+
+.new_graphic table caption {
+    background-color: #15477A;
+    border-bottom: 1px solid #3b7fbd;
+}
+
+
+@media only screen and (max-width: 800px) {
+
+	/* Tabella responsive. Il float ed il width servono per IE  */
+	.new_graphic table.adaptive, .new_graphic table.adaptive thead, .new_graphic table.adaptive tbody, .new_graphic table.adaptive th, .new_graphic table.adaptive td, .new_graphic table.adaptive tr { 
+        display: block;
+        float: left;
+        clear: both;
+        width: 100%!important;
+		height: 100%!important;
+        margin: 0;
+        padding: 0;
+	}
+	.new_graphic table.adaptive { 
+        margin: 20px 0;
+	}
+	
+    .new_graphic table.adaptive caption {
+        font-weight: bold;
+        display: block;  /* Per Safari */
+    }
+	
+	 .new_graphic table.adaptive tr { 
+        border: 1px solid #ccc; 
+        clear: left;
+        float: left;
+        width: 100%;
+    }
+	
+	 .new_graphic table.adaptive td { 
+		/* Behave  like a "row" */
+		border: 0 none;
+		padding: 0;
+        margin: 0;
+        width: 100%;
+	}
+     .new_graphic table.adaptive td span.key	{
+        float: left;
+        width: 30%;
+        padding: 5px;
+        min-height: 30px;
+    }
+     .new_graphic table.adaptive td span.value	{
+        float: left;
+        width: 65%;
+        padding: 5px;
+        min-height: 30px;
+    }
+
+    .new_graphic table.adaptive td, .new_graphic table th
+    {
+     text-align:left; 
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .new_graphic table.adaptive td span.key	{
+        float: left;
+        width: 45%;
+        padding: 5px;
+        min-height: 30px;
+    }
+    .new_graphic table.adaptive td span.value	{
+        float: left;
+        width: 45%;
+        padding: 5px;
+        min-height: 30px;
+    }
+    
+    .new_graphic table.adaptive td, .new_graphic table.adaptive th
+    {
+     text-align:left; 
+    }
+
+
+}
+
+

@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block title %}Simulatore Stipendio Netto da RAL | Jet HR{% endblock %}
+
+{% block content %}
+<div class="header-section">
+  <h1>Simula la tua Retribuzione Netta</h1>
+  <p class="subtitle">
+    Parti dalla RAL (Retribuzione Annua Lorda) e scopri in trasparenza il netto annuale, mensile e tutte le voci trattenute al lordo.
+  </p>
+</div>
+
+<div class="assumptions-banner">
+  <div class="icon">ℹ️</div>
+  <div class="text">
+    <strong>Assunzioni standard (Iterazione 1):</strong> Dipendente impiegato a tempo indeterminato, residente a <strong>Milano</strong> (Lombardia), senza familiari a carico né agevolazioni particolari.
+    <a href="{{ url_for('admin.parameters_view') }}" class="link-btn">Modifica parametri nel DB &rarr;</a>
+  </div>
+</div>
+
+<div class="calculator-grid">
+  <!-- Form Colonna Sinistra -->
+  <div class="card form-card">
+    <h2>Inserisci i dati</h2>
+    
+    <form method="POST" action="{{ url_for('main.index') }}" id="calcForm">
+      <div class="form-group">
+        <label for="ralInput">Retribuzione Annua Lorda (RAL):</label>
+        <div class="input-currency-wrapper">
+          <input 
+            type="text" 
+            id="ralInput" 
+            name="ral" 
+            value="{{ ral_display }}" 
+            placeholder="Es: 27.456,78" 
+            required
+            class="form-control"
+          >
+          <span class="currency-symbol">€</span>
+        </div>
+        <small class="form-hint">Esempio di inserimento: <strong>27.456,78</strong> (oppure 27456,78)</small>
+      </div>
+
+      <div class="form-group">
+        <label for="monthsSelect">Numero di Mensilità:</label>
+        <select id="monthsSelect" name="months" class="form-control">
+          <option value="12" {% if months_input == 12 %}selected{% endif %}>12</option>
+          <option value="13" {% if months_input == 13 %}selected{% endif %}>13</option>
+          <option value="14" {% if months_input == 14 %}selected{% endif %}>14</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block">Calcola Netto</button>
+    </form>
+  </div>
+
+  <!-- Riepilogo Card Colonna Destra -->
+  <div class="results-column">
+    {% if result %}
+    <div class="summary-cards-grid">
+      <div class="metric-card metric-primary">
+        <span class="metric-label">Netto Mensile Stimato</span>
+        <span class="metric-value">{{ result.net_monthly|currency }}</span>
+        <span class="metric-sub">su {{ result.months }} mensilità</span>
+      </div>
+
+      <div class="metric-card">
+        <span class="metric-label">Netto Annuale</span>
+        <span class="metric-value">{{ result.net_annual|currency }}</span>
+        <span class="metric-sub">su {{ result.ral|currency }} RAL</span>
+      </div>
+
+      <div class="metric-card metric-danger">
+        <span class="metric-label">Trattenute Totali (Tasse + INPS)</span>
+        <span class="metric-value">{{ result.total_retained|currency }}</span>
+        <span class="metric-sub">{{ result.tax_wedge_percent|number_it(1) }}% del lordo</span>
+      </div>
+    </div>
+
+    <!-- Tabella Dettaglio -->
+    {% include "components/_breakdown_table.html" %}
+
+    {% else %}
+    <div class="card empty-state">
+      <p>Compila il modulo a sinistra e clicca su <strong>"Calcola Netto"</strong> per visualizzare la simulazione.</p>
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/calculator.js') }}"></script>
+{% endblock %}

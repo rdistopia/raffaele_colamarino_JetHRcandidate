@@ -1,0 +1,81 @@
+================================================================================
+                    STRUTTURA DELLE CARTELLE DEL PROGETTO JET HR
+                               (RAL to Net Calculator)
+================================================================================
+
+Jet_HR/
+│
+├── .gitignore                          # File di esclusione Git (venv, __pycache__, .env, *.pyc, db locali di runtime)
+├── README.md                           # Documentazione del progetto, guida all'avvio locale/cloud, assunzioni e architettura
+├── requirements.txt                    # Dipendenze Python (Flask, pytest, ecc.)
+├── run.py                              # Entrypoint per l'avvio in ambiente di sviluppo locale (python run.py)
+├── wsgi.py                             # WSGI entrypoint dedicato per il deployment su PythonAnywhere
+│
+├── Architettura/                       # Documentazione tecnica, di processo e requisiti di business
+│   ├── Processo.txt                    # Flusso delle fasi operative dal setup al rilascio
+│   ├── requisiti.txt                   # Specifiche e vincoli (Sempre valido & Iterazione 1)
+│   ├── task_candidatura.txt            # Traccia originale del task Product Builder
+│   ├── schema_di_calcolo_.txt          # Specifiche matematiche e pipeline di calcolo Jet HR
+│   └── architettura_cartelle.txt       # Questo documento (struttura e organizzazione logica del repo)
+│
+├── Fonti/                              # Raccolta ed estrazione delle fonti normative e di dominio
+│   ├── Jet_HR_Help_Center/             # Articoli di riferimento Jet HR (CCNL, contributi, novità legislative)
+│   │   ├── CCNL/
+│   │   ├── Contributi_e_tasse/
+│   │   ├── Costo_Azienda/
+│   │   ├── Novità_Legislative/
+│   │   └── Altro/
+│   ├── Ministero_dell'Economia_e_delle_Finanze/ # Fonti ufficiali MEF (aliquote regionali/comunali, delibere)
+│   │   └── Addizionale_comunale_Milano...
+│   └── sintesi_normativa_2024_2025.md  # Scheda di sintesi con regole, formule e aliquote estratte per il calcolo
+│
+├── app/                                # Pacchetto applicativo principale (Web App Flask)
+│   ├── __init__.py                     # Application Factory (creazione istanza Flask, setup DB)
+│   │
+│   ├── core/                           # Engine di calcolo (Puro Python, disaccoppiato dal Web e da Flask)
+│   │   ├── __init__.py
+│   │   ├── calculator.py               # Orchestratore del calcolo (RAL -> Imponibili -> Trattenute -> Netto)
+│   │   ├── deductions.py               # Calcolo detrazioni da lavoro dipendente (art. 13 TUIR)
+│   │   ├── models.py                   # Data class / Schemi per input (RAL, mensilità) e output dettagliato (breakdown)
+│   │   └── taxes.py                    # Calcolo scaglioni IRPEF, Addizionale Regionale (Lombardia), Comunale (Milano)
+│   │
+│   ├── database/                       # Gestione della persistenza e parametri modificabili
+│   │   ├── __init__.py
+│   │   ├── db.py                       # Gestione connessione SQLite e helper query/transazioni
+│   │   ├── schema.sql                  # Schema DDL (tabelle per scaglioni IRPEF, aliquote INPS, addizionali, ecc.)
+│   │   ├── seed_data.json              # Valori di default ufficiali (utili anche per "Ripristina Valori Iniziali")
+│   │   └── parameters.db               # Database SQLite leggero e portabile per PythonAnywhere
+│   │
+│   ├── routes/                         # Controller e gestione endpoint HTTP (Blueprint Flask)
+│   │   ├── __init__.py
+│   │   ├── main_routes.py              # Vista calcolatore (GET/POST '/', interfaccia di input e output calcolo)
+│   │   ├── admin_routes.py             # Vista gestione parametri (GET/POST '/parametri', UI user-friendly di modifica)
+│   │   ├── api_routes.py               # Endpoint API REST (POST '/api/calculate', GET/PUT '/api/parameters')
+│   │   └── deploy_webhook.py           # Webhook protetto da Token per auto-update Git su PythonAnywhere
+│   │
+│   ├── templates/                      # Template Jinja2 per la UI HTML (Responsive & Jet HR Brand Identity)
+│   │   ├── base.html                   # Layout base (header, navbar, footer, CDN CSS/JS)
+│   │   ├── calculator.html             # Pagina principale del Calcolatore (input RAL, mensilità, visualizzazione breakdown)
+│   │   ├── parameters.html             # Interfaccia grafica di consultazione e modifica parametri/scaglioni DB
+│   │   └── components/                 # Componenti UI modulari riutilizzabili
+│   │       ├── _breakdown_table.html   # Tabella trasparente con dettaglio voci lorde, contributi, imposte e netto
+│   │       └── _alerts.html            # Flash messages (notifiche successo/errore salvataggio modifiche parametri)
+│   │
+│   └── static/                         # Risorse statiche lato client
+│       ├── css/
+│       │   └── style.css               # Stili CSS personalizzati (design moderno, pulito e user-friendly)
+│       ├── js/
+│       │   ├── calculator.js           # Gestione interattività calcolatore, validazione e visualizzazione grafica
+│       │   └── parameters.js           # Gestione dinamica form parametri (modifica aliquote, reset ai default)
+│       └── img/
+│           └── logo_jet_hr.svg         # Asset grafici
+│
+├── tests/                              # Suite di test automatizzati (garanzia di correttezza e trasparenza logiche)
+│   ├── __init__.py
+│   ├── test_calculator.py              # Test unitari sul motore di calcolo (es. casi noti con RAL 25k, 35k, 50k a Milano)
+│   ├── test_parameters.py              # Test di lettura, modifica e persistenza parametri nel database
+│   └── test_routes.py                  # Test di integrazione delle rotte web e della UI
+│
+└── scripts/                            # Script di automazione e manutenzione
+    ├── init_db.py                      # Script di inizializzazione/ripristino rapido del database SQLite
+    └── update_pythonanywhere.sh        # Script bash per git pull e reload WSGI su PythonAnywhere

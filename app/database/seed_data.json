@@ -1,0 +1,73 @@
+{
+  "global_settings": {
+    "inps_employee_rate": 0.0919,
+    "default_months": 13
+  },
+  "irpef_brackets": [
+    {
+      "bracket_order": 1,
+      "min_income": 0.0,
+      "max_income": 28000.0,
+      "rate": 0.23
+    },
+    {
+      "bracket_order": 2,
+      "min_income": 28000.0,
+      "max_income": 50000.0,
+      "rate": 0.35
+    },
+    {
+      "bracket_order": 3,
+      "min_income": 50000.0,
+      "max_income": null,
+      "rate": 0.43
+    }
+  ],
+  "regional_tax_brackets": [
+    {
+      "region_name": "Lombardia",
+      "bracket_order": 1,
+      "min_income": 0.0,
+      "max_income": 15000.0,
+      "rate": 0.0123
+    },
+    {
+      "region_name": "Lombardia",
+      "bracket_order": 2,
+      "min_income": 15000.0,
+      "max_income": 28000.0,
+      "rate": 0.0158
+    },
+    {
+      "region_name": "Lombardia",
+      "bracket_order": 3,
+      "min_income": 28000.0,
+      "max_income": 50000.0,
+      "rate": 0.0172
+    },
+    {
+      "region_name": "Lombardia",
+      "bracket_order": 4,
+      "min_income": 50000.0,
+      "max_income": null,
+      "rate": 0.0173
+    }
+  ],
+  "municipal_tax_settings": [
+    {
+      "municipality_name": "Milano",
+      "exemption_threshold": 23000.0,
+      "rate": 0.008
+    }
+  ],
+  "deductions_settings": {
+    "category": "lavoro_dipendente",
+    "base_max_deduction": 1955.0,
+    "tier1_limit": 15000.0,
+    "tier2_limit": 28000.0,
+    "tier3_limit": 50000.0,
+    "tier2_base": 1910.0,
+    "tier2_factor": 1190.0,
+    "bonus_25_35k": 65.0
+  }
+}

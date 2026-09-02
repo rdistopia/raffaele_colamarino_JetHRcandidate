@@ -1,0 +1,228 @@
+{% extends "base.html" %}
+
+{% block title %}Gestione Parametri di Calcolo DB | Jet HR{% endblock %}
+
+{% block content %}
+<div class="header-section">
+  <h1>Gestione Parametri di Calcolo (Database SQLite)</h1>
+  <p class="subtitle">
+    In conformità ai requisiti di progetto, tutti i parametri di calcolo e gli scaglioni fiscali sono memorizzati nel database SQLite e liberamente modificabili da questa interfaccia.
+  </p>
+</div>
+
+<form method="POST" action="{{ url_for('admin.parameters_view') }}" id="paramsForm">
+  <input type="hidden" name="action" value="update">
+
+  <!-- 1. Parametri Generali & Locali Milano -->
+  <div class="card parameters-card">
+    <div class="card-header">
+      <h2>1. Parametri Generali & Addizionale Comunale Milano</h2>
+      <span class="badge">Configurazione Base</span>
+    </div>
+
+    <div class="form-row-grid">
+      <div class="form-group">
+        <label for="inpsRate">Aliquota INPS Dipendente (IVS %):</label>
+        <div class="input-currency-wrapper">
+          <input 
+            type="text" 
+            id="inpsRate" 
+            name="inps_rate" 
+            value="{{ (params.inps_employee_rate * 100)|number_it(2) }}" 
+            required
+            class="form-control"
+          >
+          <span class="currency-symbol">%</span>
+        </div>
+        <small>Default Jet HR: 9,19%</small>
+      </div>
+
+      <div class="form-group">
+        <label for="defaultMonths">Mensilità Predefinite:</label>
+        <select id="defaultMonths" name="default_months" class="form-control">
+          <option value="12" {% if params.default_months == 12 %}selected{% endif %}>12</option>
+          <option value="13" {% if params.default_months == 13 %}selected{% endif %}>13</option>
+          <option value="14" {% if params.default_months == 14 %}selected{% endif %}>14</option>
+        </select>
+        <small>Valore predefinito selezionato all'avvio</small>
+      </div>
+    </div>
+
+    <div class="form-row-grid">
+      <div class="form-group">
+        <label for="munThreshold">Soglia Esenzione Addizionale Milano (€):</label>
+        <div class="input-currency-wrapper">
+          <input 
+            type="text" 
+            id="munThreshold" 
+            name="mun_threshold" 
+            value="{{ params.municipal_settings.threshold|number_it(0) }}" 
+            required
+            class="form-control"
+          >
+          <span class="currency-symbol">€</span>
+        </div>
+        <small>Default: 23.000 €</small>
+      </div>
+
+      <div class="form-group">
+        <label for="munRate">Aliquota Addizionale Milano (% oltre soglia):</label>
+        <div class="input-currency-wrapper">
+          <input 
+            type="text" 
+            id="munRate" 
+            name="mun_rate" 
+            value="{{ (params.municipal_settings.rate * 100)|number_it(2) }}" 
+            required
+            class="form-control"
+          >
+          <span class="currency-symbol">%</span>
+        </div>
+        <small>Default: 0,80%</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Tabelle Scaglioni Modificabili -->
+  <div class="tables-overview-grid">
+    <!-- Tabella Scaglioni IRPEF -->
+    <div class="card">
+      <div class="card-header">
+        <h3>2. Scaglioni IRPEF Nazionali (Riforma 2024)</h3>
+      </div>
+      <p class="table-intro-text">Modifica le soglie di reddito e le aliquote percentuali per ciascun scaglione:</p>
+
+      <table class="params-table edit-table">
+        <thead>
+          <tr>
+            <th>Scaglione</th>
+            <th>Da (€)</th>
+            <th>A (€)</th>
+            <th>Aliquota (%)</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for b in params.irpef_brackets %}
+          <tr>
+            <input type="hidden" name="irpef_id[]" value="{{ b.id }}">
+            <td><strong>{{ b.bracket_order }}° Scaglione</strong></td>
+            <td>
+              <input 
+                type="text" 
+                name="irpef_min_{{ b.id }}" 
+                value="{{ b.min_income|number_it(0) }}" 
+                class="form-control form-control-sm"
+                required
+              >
+            </td>
+            <td>
+              <input 
+                type="text" 
+                name="irpef_max_{{ b.id }}" 
+                value="{% if b.max_income is not none %}{{ b.max_income|number_it(0) }}{% endif %}" 
+                placeholder="Nessun limite" 
+                class="form-control form-control-sm"
+              >
+            </td>
+            <td>
+              <div class="input-currency-wrapper input-wrapper-sm">
+                <input 
+                  type="text" 
+                  name="irpef_rate_{{ b.id }}" 
+                  value="{{ (b.rate * 100)|number_it(2) }}" 
+                  class="form-control form-control-sm"
+                  required
+                >
+                <span class="currency-symbol">%</span>
+              </div>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Tabella Addizionale Regionale Lombardia -->
+    <div class="card">
+      <div class="card-header">
+        <h3>3. Addizionale Regionale Lombardia</h3>
+      </div>
+      <p class="table-intro-text">Modifica le fasce e le aliquote progressive regionali:</p>
+
+      <table class="params-table edit-table">
+        <thead>
+          <tr>
+            <th>Fascia</th>
+            <th>Da (€)</th>
+            <th>A (€)</th>
+            <th>Aliquota (%)</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for r in params.regional_brackets %}
+          <tr>
+            <input type="hidden" name="regional_id[]" value="{{ r.id }}">
+            <td><strong>{{ r.bracket_order }}° Fascia</strong></td>
+            <td>
+              <input 
+                type="text" 
+                name="regional_min_{{ r.id }}" 
+                value="{{ r.min_income|number_it(0) }}" 
+                class="form-control form-control-sm"
+                required
+              >
+            </td>
+            <td>
+              <input 
+                type="text" 
+                name="regional_max_{{ r.id }}" 
+                value="{% if r.max_income is not none %}{{ r.max_income|number_it(0) }}{% endif %}" 
+                placeholder="Nessun limite" 
+                class="form-control form-control-sm"
+              >
+            </td>
+            <td>
+              <div class="input-currency-wrapper input-wrapper-sm">
+                <input 
+                  type="text" 
+                  name="regional_rate_{{ r.id }}" 
+                  value="{{ (r.rate * 100)|number_it(2) }}" 
+                  class="form-control form-control-sm"
+                  required
+                >
+                <span class="currency-symbol">%</span>
+              </div>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Azione di salvataggio globale -->
+  <div class="card save-action-card">
+    <div class="save-action-flex">
+      <div>
+        <strong>Salvataggio configurazione:</strong>
+        <p class="text-muted">Tutti i parametri sopra indicati verranno aggiornati simultaneamente nel database SQLite.</p>
+      </div>
+      <button type="submit" class="btn btn-primary btn-lg">Salva Tutte le Modifiche nel DB</button>
+    </div>
+  </div>
+</form>
+
+<!-- Reset ai valori di fabbrica -->
+<div class="card reset-card">
+  <div class="reset-section">
+    <h3>Ripristino Valori Predefiniti (Seed Data)</h3>
+    <p>Se desideri annullare modifiche sperimentali, puoi ripristinare in un click tutti i parametri, gli scaglioni IRPEF e le addizionali ai valori ufficiali dell'Help Center Jet HR:</p>
+    <form method="POST" action="{{ url_for('admin.parameters_view') }}">
+      <input type="hidden" name="action" value="reset">
+      <button type="submit" class="btn btn-secondary" onclick="return confirm('Confermi il ripristino di tutti i parametri e scaglioni ai valori iniziali ufficiali Jet HR?');">
+        Ripristina Valori di Fabbrica
+      </button>
+    </form>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,195 @@
+================================================================================
+           SCHEMA DI CALCOLO RETRIBUZIONE NETTA DA RAL (MODELLO JET HR)
+================================================================================
+Documento di specifica e formalizzazione delle logiche di calcolo Jet HR.
+
+--------------------------------------------------------------------------------
+INDICE:
+1. Fonti di Riferimento
+2. Flusso Logico Complessivo (Pipeline di Calcolo)
+3. Formule Matematiche e Tabelle di Riferimento
+4. Modello Dati per il Database (Parametri Configurabili da UI)
+================================================================================
+
+
+================================================================================
+1. FONTI DI RIFERIMENTO
+================================================================================
+Il calcolo adotta la metodologia ufficiale documentata da Jet HR:
+
+- Fonte primaria:
+  Fonti/Jet_HR_Help_Center/Costo_Azienda/Come calcolare lo stipendio netto _ Jet HR - Help Center.html
+- Fonti di supporto e approfondimento normativo Jet HR:
+  * Fonti/Jet_HR_Help_Center/Contributi_e_tasse/Contributi dovuti dai dipendenti_ le novità per il 2024 _ Jet HR - Help Center.html
+  * Fonti/Jet_HR_Help_Center/Contributi_e_tasse/Detrazioni fiscali_ cosa sono e come funzionano _ Jet HR - Help Center.html
+  * Fonti/Jet_HR_Help_Center/Novità_Legislative/Legge di bilancio 2025_ cosa cambia _ Jet HR - Help Center.html
+
+Ambito e assunzioni standard di progetto:
+- Dipendente: Impiegato a tempo indeterminato
+- Sede / Residenza: Comune di Milano (Regione Lombardia)
+- Situazione personale: Nessuna agevolazione particolare, nessun carico familiare
+- Riforma IRPEF: 3 scaglioni (in vigore dal 2024)
+
+
+================================================================================
+2. FLUSSO LOGICO COMPLESSIVO (PIPELINE DI CALCOLO)
+================================================================================
+
+  [ Retribuzione Annua Lorda (RAL) ]
+                 │
+                 ▼
+  [ Step 1: Contributi IVS Lavoratore (9,19%) ]
+                 │
+                 ▼
+  [ Imponibile Fiscale = RAL - Contributi ]
+                 │
+        ┌────────┴──────────────────────────┐
+        ▼                                   ▼
+  [ IRPEF Lorda per Scaglioni ]      [ Addizionali Locali ]
+                                     ├── Regionale Lombardia (a scaglioni)
+                                     └── Comunale Milano (0,8% oltre 23k)
+        │                                   │
+        └────────┬──────────────────────────┘
+                 ▼
+  [ Step 2: Imposta Lorda Totale = IRPEF + Addizionali ]
+                 │
+                 ▼
+  [ Step 3: Detrazioni Lavoro Dipendente (Art. 13 TUIR) ]
+                 │
+                 ▼
+  [ Step 4: Imposta Netta Effettiva = max(0, Imposta Lorda - Detrazioni) ]
+                 │
+                 ▼
+  [ Step 5: Retribuzione Netta Annuale = Imponibile Fiscale - Imposta Netta ]
+                 │
+                 ▼
+  [ Netto Mensile = Netto Annuale / Numero Mensilità (13 o 14) ]
+
+
+================================================================================
+3. FORMULE MATEMATICHE E TABELLE DI RIFERIMENTO
+================================================================================
+
+--------------------------------------------------------------------------------
+STEP 1: CONTRIBUTI A CARICO DIPENDENTE E IMPONIBILE FISCALE
+--------------------------------------------------------------------------------
+I contributi previdenziali IVS a carico del dipendente corrispondono al 9,19%
+della RAL e deducono direttamente la base imponibile fiscale.
+
+Formule:
+  Contributi_IVS = RAL * 9,19%
+  Imponibile_Fiscale = RAL - Contributi_IVS
+
+--------------------------------------------------------------------------------
+STEP 2: CALCOLO DELLE IMPOSTE LORDE
+--------------------------------------------------------------------------------
+L'imposta lorda è data dalla somma di IRPEF, Addizionale Regionale e Addizionale Comunale.
+
+Formula:
+  Imposta_Lorda = IRPEF_Lorda + Addizionale_Regionale + Addizionale_Comunale
+
+A) Scaglioni IRPEF (Metodologia Jet HR - 3 aliquote):
+  ┌────────────────────────┬──────────┐
+  │ Fascia Imponibile      │ Aliquota │
+  ├────────────────────────┼──────────┤
+  │ Fino a 28.000,00 €     │ 23%      │
+  │ Tra 28.000,01 e 50.000 │ 35%      │
+  │ Oltre 50.000,00 €      │ 43%      │
+  └────────────────────────┴──────────┘
+
+B) Addizionale Regionale Lombardia (Scaglioni progressivi):
+  ┌────────────────────────┬──────────┐
+  │ Fascia Imponibile      │ Aliquota │
+  ├────────────────────────┼──────────┤
+  │ Fino a 15.000,00 €     │ 1,23%    │
+  │ Tra 15.000,01 e 28.000 │ 1,58%    │
+  │ Tra 28.000,01 e 50.000 │ 1,72%    │
+  │ Oltre 50.000,00 €      │ 1,73%    │
+  └────────────────────────┴──────────┘
+
+C) Addizionale Comunale Milano (Metodologia Jet HR):
+  ┌────────────────────────┬──────────────────────────────────────────┐
+  │ Fascia Imponibile      │ Aliquota                                 │
+  ├────────────────────────┼──────────────────────────────────────────┤
+  │ Fino a 23.000,00 €     │ 0,0% (Esenzione)                         │
+  │ Oltre 23.000,00 €      │ 0,8% (Applicata sulla quota eccedente)   │
+  └────────────────────────┴──────────────────────────────────────────┘
+
+  Formula:
+    Se Imponibile_Fiscale <= 23.000,00 €:
+        Addizionale_Comunale = 0,00 €
+    Se Imponibile_Fiscale > 23.000,00 €:
+        Addizionale_Comunale = (Imponibile_Fiscale - 23.000,00) * 0,8%
+
+--------------------------------------------------------------------------------
+STEP 3: DETRAZIONI DA LAVORO DIPENDENTE (ART. 13 TUIR)
+--------------------------------------------------------------------------------
+Le detrazioni spettano a riduzione dell'imposta lorda per lavoro dipendente a
+tempo indeterminato in base all'imponibile fiscale:
+
+- Se Imponibile <= 15.000,00 €:
+    Detrazione = 1.955,00 € (con un minimo spettante di 690,00 €)
+
+- Se 15.000,00 € < Imponibile <= 28.000,00 €:
+    Quota_base = 1.910,00 + [ 1.190,00 * (28.000,00 - Imponibile) / 13.000,00 ]
+    Maggiorazione (se 25.000,00 € < Imponibile <= 35.000,00 €) = +65,00 €
+    Detrazione = Quota_base + 65,00 €
+
+- Se 28.000,00 € < Imponibile <= 50.000,00 €:
+    Quota_base = 1.910,00 * [ (50.000,00 - Imponibile) / 22.000,00 ]
+    Maggiorazione (se 28.000,00 € < Imponibile <= 35.000,00 €) = +65,00 €
+    Detrazione = Quota_base + (65,00 € se Imponibile <= 35.000,00 altrimenti 0)
+
+- Se Imponibile > 50.000,00 €:
+    Detrazione = 0,00 €
+
+--------------------------------------------------------------------------------
+STEP 4: IMPOSTA NETTA EFFETTIVA
+--------------------------------------------------------------------------------
+Formula:
+    Imposta_Netta = max(0, Imposta_Lorda - Detrazioni)
+
+--------------------------------------------------------------------------------
+STEP 5: DETERMINAZIONE DEL NETTO ANNUALE E MENSILE
+--------------------------------------------------------------------------------
+Formule:
+    Netto_Annuale = Imponibile_Fiscale - Imposta_Netta
+    Netto_Mensile = Netto_Annuale / Numero_Mensilità (13 o 14 a scelta utente)
+
+
+================================================================================
+4. MODELLO DATI PER IL DATABASE (SQLite)
+================================================================================
+Tutti i parametri di calcolo sono memorizzati in tabelle dedicate modificabili da UI:
+
+Tabella: global_settings
+  - inps_employee_rate: REAL (default 0.0919)
+  - default_months: INTEGER (default 13)
+
+Tabella: irpef_brackets
+  - bracket_order: INTEGER
+  - min_income: REAL
+  - max_income: REAL (NULL se senza limite superiore)
+  - rate: REAL
+
+Tabella: regional_tax_brackets
+  - region_name: TEXT ('Lombardia')
+  - bracket_order: INTEGER
+  - min_income: REAL
+  - max_income: REAL
+  - rate: REAL
+
+Tabella: municipal_tax_settings
+  - municipality_name: TEXT ('Milano')
+  - exemption_threshold: REAL (default 23000.0)
+  - rate: REAL (default 0.008)
+
+Tabella: deductions_settings
+  - category: TEXT ('lavoro_dipendente')
+  - base_max_deduction: REAL (1955.0)
+  - tier1_limit: REAL (15000.0)
+  - tier2_limit: REAL (28000.0)
+  - tier3_limit: REAL (50000.0)
+  - tier2_base: REAL (1910.0)
+  - tier2_factor: REAL (1190.0)
+  - bonus_25_35k: REAL (65.0)

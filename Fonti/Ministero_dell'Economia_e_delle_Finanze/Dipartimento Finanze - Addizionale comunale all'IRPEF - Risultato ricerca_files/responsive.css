@@ -1,0 +1,1186 @@
+/* desktop */
+
+@media only screen and (min-width: 801px) {
+	body{
+		min-width: 700px;
+		z-index: 1;
+	}
+	.contenitore,
+	footer{
+		min-width: 700px;
+	}
+	header .divisorio,
+	#colonna-1 > h1,
+	#threeline,
+	#back-to-top{
+		display: none;
+	}
+
+	#canale-home #colonna-1-2 .focus .focus-container p img{
+		width: 100%;
+	}
+	#menu-sezioni{
+		position: relative;
+		background-color: #fff;
+	}
+	#form_di_ricerca > form > p{
+		background-color: #f2f2f2;
+	}
+	.dropdown-menu {
+	    background-color: #305073;
+	    border-top: 1px solid #fff;
+	    padding: 10px 0 0;
+	    position: absolute;
+	    left: 0;
+	    top: -10000px;
+	    z-index: 1;
+	}
+	#menu-sezioni .dropdown-menu.fix-dropdown-menu{
+		margin-top: 10px;
+	}
+	#menu-sezioni .dropdown-icon.fix-dropdown-icon{
+		margin-top: 10px;
+	}
+	#colonna-1-3 > div.box-lista > div > ul > li.no-display.menu3-active > span{
+		padding-left: 4px;
+	}
+	#canale-home #colonna-1-3 .box-lista li.menu3-active{
+    	padding: 6px 6px 6px 6px;
+    	background-color: #c0cad6;
+    	
+	}
+	#canale-home #colonna-1-3 .box-lista li.menu3-active a,
+	#canale-home #colonna-1-3 .box-lista li.menu3-active a:visited{
+		color: #434343;
+		margin: 0;
+		padding: 0 0 0 6px;
+	}
+	#canale-home #colonna-1-3 > div.box-lista > div > ul > li.menu3-active > ul{
+	    margin: 10px -6px -6px -6px;
+	}
+	#canale-home #colonna-1-3 > div.box-lista > div > ul > li.menu3-active > ul > li{
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+	#menu-sezione{
+		display: none;
+	}
+	nav{
+		margin-bottom: 30px;
+	}
+
+
+
+/* AGGIUNTI/MODIFICATI A DESKTOP */
+
+ #menu-sezioni .menu-open .dropdown-icon {
+  display: block;
+ }
+
+
+
+}
+
+/* tablet Portrait */
+
+@media only screen and (max-width: 800px) and (min-width: 481px) {
+
+	body {
+		min-width: 481px;
+		z-index: 2;
+	}
+
+	#colonna-1 > h1{
+		text-transform: uppercase;
+		font-size: 100%;
+	}
+	.contenitore{
+		min-width: 481px;
+	}
+	#colonna-1 > div.box-lista > div > ul > li.menu3-active > a,
+	#colonna-1 > div.box-lista > div > ul > li.menu3-active > a:visited{
+		background: transparent url(../img/custom/menu_terzo.png) no-repeat 96% center;
+		color:#434343;
+		display: block;
+		font-weight: 600;
+		padding: 15px 0 15px 15px;
+	}
+	#colonna-1 > div.box-lista > div > ul > li.menu3-active > ul{
+		list-style-type: none;
+		background-color: #fff;
+    	text-transform: capitalize;
+    	
+	}
+	#colonna-1 > div.box-lista > div > ul > li.menu3-active > ul li{	
+		background-color: #dfe4ea;
+		width: 90%;
+	}
+	#colonna-1 > div.box-lista > div > ul > li.menu3-active > ul li a,
+	#colonna-1 > div.box-lista > div > ul > li.menu3-active > ul li a:visited{
+		color: #434343;
+		display: block;
+		padding: 10px 0 10px 15px;
+		border-top: 1px solid #fff;
+		font-weight: 600;
+		text-transform: capitalize;
+	}
+
+	#colonna-1-3,
+	#colonna-1-4,
+	#colonna-1-4 .box-principale .box-1,
+	#colonna-1-4 .box-principale .box-2{
+		float: none;
+		width: auto;
+		margin-top: 0;
+	}
+
+/* Modifica breadcrumb visibile ancvhe su mobile */
+	#menu-navigazione {
+		/*display: none;*/
+        display: block;
+        margin: 10px 0;
+        background-color: #FFF;
+        padding: 10px 5px;
+	}
+    #menu-navigazione p.title2 {
+        font-size: 100%;
+        text-align: left;
+        padding: 0;
+        width: 100%;
+        float: none;
+    }
+    #menu-navigazione p.title2 span {
+        display: none;    
+    }
+    .box-lista .menu3-container h1 {
+        /*display: none;*/
+    }
+
+
+/* Fine modifica breadcrumb visibile ancvhe su mobile */
+
+	div.box-lista > div.menu3-container{
+		margin-top: 20px;
+	}
+	
+	div.box-lista > div > ul > li{
+		background-color: #c0cad6;
+		list-style-type: none;
+	}
+	#canale-home #colonna-1-3 .box-lista li.menu3-active{
+    	padding: 0;
+    	background-color: #c0cad6;
+    	
+	}
+	a.menu3-close,
+	a.menu3-close:visited{
+		padding-left: 15px;
+		color: #000;
+		display: block;
+		background: transparent url(../img/custom/bullet-menu-canale-in.png) no-repeat 95% center;
+	}
+
+	a.menu3-open,
+	a.menu3-open:visited{
+		padding-left: 15px;
+		color: #000;
+		display: block;
+		background: transparent url(../img/custom/bullet-menu-canale-in-open.png) no-repeat 95% center;
+	}
+	
+	.accordion h1{
+		
+	}
+	.accordion h1 span{
+		display: block;
+		background: transparent url("../img/custom/bullet-accordion.png") no-repeat right center;
+	}
+
+	.accordion.accordionOpen h1 span{
+		background-image: url("../img/custom/bullet-accordion-open.png");
+	}
+	.accordion > div{
+		display: none;
+		background-color: #fff;
+	}
+
+	.accordion.accordionOpen > div{
+		display: block;
+	}
+
+	.no-display{
+		/*display: none;*/
+	}
+
+	div.box-lista > div > ul > li > div > ul{
+		border-top: 1px solid #e8e8e8;
+		list-style-type: none;
+	}
+
+	div.box-lista > div > ul > li > div > ul > li{
+		background-color: #c0cad6;
+		border-bottom: 1px solid #e8e8e8;
+		padding: 10px 0;
+	}
+	div.box-lista > div > ul > li > div > ul > li a,
+	div.box-lista > div > ul > li > div > ul > li a:visited{
+		color: #000;
+		text-transform: lowercase;
+		padding-left: 30px;
+	}
+
+	div.box-lista > div > ul > li > div{
+		margin-top: 10px;
+		margin-bottom: -21px;
+	}
+
+ 	#menu-sezioni #livello-1 > li{
+ 		float: none;
+ 		text-align: left;
+ 		width: auto;
+ 		text-transform: uppercase;
+ 		background: #fff;
+ 		display: block;
+ 		height: auto;
+ 		padding: 5px;
+ 	}
+ 	#menu-sezioni #livello-1 > li > a{
+ 		border-bottom: 1px solid #f2f2f2;
+		padding-left: 15px;
+ 	}
+ 	#menu-sezioni #livello-1 > li > a br {
+    	display: none;
+	}
+ 	.livello-1-separatore{
+ 		border-right: 0;
+ 	}
+
+ 	#testata > div.menu-accessori{
+ 		float: none;
+ 		position: static;
+ 		width: 100%;
+ 		z-index: 9999999;
+ 		margin-top: 0;
+ 		margin-bottom: 30px;
+ 		border-bottom: 1px solid #f2f2f2;
+ 	}
+ 	#menu-sezione > div.menu-servizio{
+ 		float: none;
+ 		margin: 6px -15px 10px -15px;
+ 		padding: 0 0 0 16px;
+ 	}
+ 	#menu-sezione > div.menu-servizio li:before{
+ 		padding-right: 0;
+ 		content: '';
+ 		color: transparent;
+ 	}
+
+ 	#menu-sezione > div.menu-servizio > ul > li{
+ 		float: none;
+ 		text-align: left;
+ 		padding: 0;
+ 		text-transform: capitalize;
+ 	}
+ 	#testata .menu-servizio a,
+ 	#testata .menu-servizio a:visited{
+ 		color: #000;
+ 	}
+
+ 	#testata .menu-servizio a.evidenza,
+ 	#testata .menu-servizio a.evidenza:visited,
+ 	.evidenzia{
+ 		border: none;
+    	background-color: transparent;
+    	padding: 0;
+ 	}
+
+ 	.dropdown-menu{
+ 		left: 0;
+ 		width: 96%;
+ 	}
+
+ 	.dropdown-menu ul{
+ 		float: none;
+ 		width: auto;
+ 		text-transform: capitalize;
+ 	}
+ 	.dropdown-menu ul li{
+ 		margin: 0 0 0 35px;
+ 	}
+
+ 	.dropdown-close{
+ 		display: none;
+ 	}
+
+	#testata > div.menu-servizio,
+	#testata > div.menu-accessori,
+	#form_di_ricerca > form > p > a.rss > img,
+	#form_di_ricerca > form > p > a.accessibilita > img,
+	#canale-home #colonna-1-2 .focus .focus-container hr,
+	#colonna-1-2 .dipartimento .giustizia-tributaria hr,
+	#colonna-1-2 .dipartimento .documentazione-economica hr,
+	#colonna-1-2 .dipartimento .federalismo-fiscale hr{
+		display: none;
+	}
+
+	input#query {
+    	width: 75%;
+	}
+
+	form {
+    	width: 100%;
+	}
+
+	div#form_di_ricerca {
+    	vertical-align: middle;
+    	line-height: 35px;
+    	width: 96%;
+    	margin-left: 2%;
+		margin-bottom: 10px;
+		padding-top: 10px;
+	}
+
+	#form_di_ricerca > form {
+    	text-align: center;
+    	background-color: #f2f2f2;
+	}
+	.menu-servizio{
+		margin-top: 20px;
+    	padding-left: 20px;
+    	line-height: 30px;
+	}
+	.menu-servizio ul{
+		list-style-type: none;
+	}
+	.menu-servizio ul li a,
+	.menu-servizio ul li a:visited{
+		color: #000;
+	}
+	#menu-sezione{
+		height: 20px;
+	}
+	.menu-3-hide{
+		display: none;
+	}
+
+	#colonna-1-1{
+		float: none;
+		width: auto;
+	}
+
+	#canale-home #colonna-1-1 #tag-cloud, 
+	#canale-home #colonna-1-1 .studi-analisi,
+	#canale-home #colonna-1-1 .fisco,
+	#canale-home #colonna-1-1 .documentazione{
+		width: auto;
+		float: none;
+	}
+	#canale-home #colonna-1-1 .studi-analisi,
+	#canale-home #colonna-1-1 .documentazione{
+		margin-left: 0;
+	}
+	#colonna-1-2{
+		float: none;
+		width: 100%;
+		margin-top: 10px;
+	}
+
+	#canale-home #colonna-1-2 .giustizia-tributaria,
+	#canale-home #colonna-1-2 .documentazione-economica,
+	#canale-home #colonna-1-2 .federalismo-fiscale{
+		margin: 0 0 0 15px;
+		width: 30%;
+		float: left;
+	}
+
+	#canale-home #colonna-1-2 .fisco-container,
+	#canale-home #colonna-1-1 .fisco-container,
+	#canale-home #colonna-1-2 .documentazione-container,
+	#canale-home #colonna-1-1 .documentazione-container{
+		margin: 0 10px 0 10px;
+		width: auto;
+	}
+
+	#canale-home #colonna-1-2 .focus .focus-container ul li a,
+	#canale-home #colonna-1-2 .fisco .fisco-container ul li a,
+	#canale-home #colonna-1-1 .fisco .fisco-container ul li a,
+	#canale-home #colonna-1-2 .documentazione .documentazione-container ul li a,
+	#canale-home #colonna-1-1 .documentazione .documentazione-container ul li a{
+		background: transparent url(../img/custom/bullet_raquo.png) no-repeat right top 14px;
+	}
+
+	#canale-home #colonna-1-2 h1.monete {
+ 		background-image: url(../img/custom/icona-entrate.png);
+ 		background-position: 14px center;
+	}
+
+	#canale-home #colonna-1-2 .giustizia-tributaria h2,
+	#canale-home #colonna-1-2 .federalismo-fiscale h2{
+		margin-bottom: 27px;
+	}
+
+	#canale-home #colonna-1-2 .focus .focus-container{
+		margin: 0 0 0 15px;
+	}
+	#canale-home #colonna-1-2 .focus .focus-container p{
+		float: left;
+		width: 40%;
+		margin-right: 10px;
+	}
+
+	#canale-home #colonna-1-2 .focus .focus-container ul{
+		float: left;
+	}
+	
+	#canale-home #colonna-1-2 .focus .focus-container ul li a{
+		text-align: left;
+	}
+
+	#colonna-1 > div.box-container > div.box-1,
+	#colonna-1 > div.box-container > div.box-2{
+		float: none;
+		width: auto;
+	}
+	#colonna-1 > div.box-container > div.box-1{
+		padding-top: 20px;
+	}
+	#colonna-1 > div.box-container > div.box-2{
+		padding-bottom: 20px;
+	}
+	#tag-cloud{
+		padding-bottom: 20px;
+	}
+
+	#back-to-top{
+		text-align: center;
+		margin-top: 30px;
+	}
+	footer{		
+		min-width: 481px;
+		margin: 0 auto;		
+	}
+	.footerAccordion{
+		background: transparent url(../img/custom/bullet-footer-menu.png) no-repeat 95% center;
+	}
+	.footerAccordion-open{
+		background: transparent url(../img/custom/bullet-footer-menu-open.png) no-repeat 95% center;
+	}
+	#legale div.contatti {
+		background: transparent url(../img/content/contatti-logo.png) no-repeat center bottom;
+    	height: 80px;
+	}
+	#legale div.contatti p{
+		padding-left: 16px;
+	}
+	.footer-menu{
+		padding-bottom: 30px;
+	}
+	.footer-menu h2{
+		text-align: left;
+		margin: 0 20px 0 30px;
+		padding: 20px 0;
+	}
+	.footer-menu div{
+		display: none;
+		width: 30%;
+	}
+	#footer .footer-menu ul li.bullet_raquo{
+    	background: transparent url("../img/custom/bullet_raquo.png") no-repeat scroll left top 3px;
+   	}
+
+
+/* AGGIUNTI/MODIFICATI A TABLET */
+
+#threeline {
+	float: right;
+	margin: 60px auto;
+	width: 26px; height: 24px;
+	background: transparent url(../img/custom/threeline.png) no-repeat center center;
+	padding: 6px;
+	cursor: pointer;
+}
+
+#threeline.menu-open {
+	background-image: url(../img/custom/close-threeline.png);
+}
+
+ nav[role=navigation] {
+  position: absolute; left: -10000px; top: auto;
+  display: block;
+  margin-bottom: 30px;
+ }
+
+ nav[role=navigation].menu-open {
+  position: static;
+  background-color: #fff;
+ }
+
+ #menu-sezioni .menu-open .dropdown-menu {
+  position: static;
+ }
+
+ #menu-sezioni .dropdown-menu li {
+  float: none;
+  width: auto;
+  text-align: left;
+ }
+ 
+ /* Modifiche nuovi box generici */
+
+  .col-1-2 {
+	  width: auto;
+	  float: none;
+	  margin-bottom:  20px;
+  }
+  .col-1-2:first-child {
+	  margin-right: 0;
+  }
+
+
+
+.box-social {
+    margin: 10px 20px;
+    text-align: right;
+}
+.box-social img{
+    margin-right: 10px;
+}
+
+}
+
+/* mobile */
+
+@media only screen and (max-width: 480px) {
+
+	body{
+		min-width: 310px;
+		z-index: 3;
+	}
+
+	#testata > div.logo{
+		text-align: left;
+	}
+	#testata > div.logo img{
+		width: 60%;
+		height: auto;
+	}
+	#colonna-1 > div.box-lista > div > ul > li.menu3-active > ul{
+		list-style-type: none;
+		background-color:#fff;
+		text-transform: capitalize;
+		
+	}
+	#colonna-1 > div.box-lista > div > ul > li.menu3-active > ul li{	
+		background-color: #dfe4ea;
+		width: 85%;
+	}
+	#colonna-1 > div.box-lista > div > ul > li.menu3-active > ul li a,
+	#colonna-1 > div.box-lista > div > ul > li.menu3-active > ul li a:visited{
+		color: #434343;
+		display: block;
+		padding: 10px 0 10px 10px;
+		border-top: 1px solid #fff;
+	}
+	#canale-home #colonna-1-3 .box-lista li.menu3-active{
+    	padding: 0;
+    	background-color: #c0cad6;
+    	
+	}
+
+	#testata > div.menu-servizio,
+	#form_di_ricerca > form > p > a.rss > img{
+		display: none;
+	}
+	#menu-sezioni #livello-1{
+		font-size: 85%;
+	}
+	#colonna-1 > h1{
+		text-transform: uppercase;
+		font-size: 100%;
+	}
+	.contenitore{
+		min-width: 307px;
+	}
+
+	#colonna-1-3,
+	#colonna-1-4,
+	#colonna-1-4 .box-principale .box-1,
+	#colonna-1-4 .box-principale .box-2{
+		float: none;
+		width: auto;
+	}
+
+	/* Modifica breadcrumb visibile ancvhe su mobile */
+	#menu-navigazione {
+		/*display: none;*/
+        display: block;
+        margin: 10px 0;
+        background-color: #FFF;
+        padding: 10px 5px;
+	}
+    #menu-navigazione p.title2 {
+        font-size: 100%;
+        text-align: left;
+        padding: 0;
+        width: 100%;
+        float: none;    
+    }
+    #menu-navigazione p.title2 span {
+        display: none;    
+    }
+    .box-lista .menu3-container h1 {
+        /*display: none;*/
+    }
+/* Fine modifica breadcrumb visibile ancvhe su mobile */
+
+	div.box-lista > div.menu3-container{
+		margin-top: 20px;
+		font-size: 90%;
+	}
+	
+	div.box-lista > div > ul > li{
+		background-color: #c0cad6;
+		list-style-type: none;
+	}
+
+	#colonna-1 > div.box-lista > div > ul > li.menu3-active > a,
+	#colonna-1 > div.box-lista > div > ul > li.menu3-active > a:visited{
+		background: transparent url(../img/custom/menu_terzo.png) no-repeat 95% center;
+		color:#434343;
+		display: block;
+		font-weight: 600;
+		font-size: 90%;
+		height: 21px;
+		padding: 15px 48px 15px 10px;
+	}
+	a.menu3-close,
+	a.menu3-close:visited{
+		padding-left: 15px;
+		color: #000;
+		display: block;
+		background: transparent url(../img/custom/bullet-menu-canale-in.png) no-repeat 95% center;
+	}
+
+	a.menu3-open,
+	a.menu3-open:visited{
+		padding-left: 15px;
+		color: #000;
+		display: block;
+		background: transparent url(../img/custom/bullet-menu-canale-in-open.png) no-repeat 95% center;
+	}
+
+	.accordion h1{
+		
+	}
+	.accordion h1 span{
+		display: block;
+		background: transparent url("../img/custom/bullet-accordion.png") no-repeat right center;
+	}
+
+	.accordion.accordionOpen h1 span{
+		background-image: url("../img/custom/bullet-accordion-open.png");
+	}
+	.accordion > div{
+		display: none;
+		background-color: #fff;
+	}
+
+	.accordion.accordionOpen > div{
+		display: block;
+	}
+	.no-display{
+		/*display: none;*/
+	}
+	div.box-lista > div > ul > li > div > ul{
+		border-top: 1px solid #e8e8e8;
+		list-style-type: none;
+	}
+
+	div.box-lista > div > ul > li > div > ul > li{
+		background-color: #c0cad6;
+		border-bottom: 1px solid #e8e8e8;
+		padding: 10px 0;
+	}
+	div.box-lista > div > ul > li > div > ul > li a,
+	div.box-lista > div > ul > li > div > ul > li a:visited{
+		color: #000;
+		text-transform: lowercase;
+		padding-left: 30px;
+	}
+
+	div.box-lista > div > ul > li > div{
+		margin-top: 10px;
+		margin-bottom: -21px;
+	}
+
+	#colonna-1-1 > div.titolo > ul{
+		font-size: 90%;
+	}
+
+ 	#menu-sezioni #livello-1 > li{
+ 		float: none;
+ 		text-align: left;
+ 		width: auto;
+ 		text-transform: uppercase;
+ 		background: #fff;
+ 		display: block;
+ 		height: auto;
+ 	}
+ 	#menu-sezioni #livello-1 > li > a{
+ 		border-bottom: 1px solid #f2f2f2;
+ 		margin: 0px;
+		padding-left: 15px;
+ 	}
+ 	#menu-sezioni #livello-1 > li > a br {
+    	display: none;
+	}
+ 	.livello-1-separatore{
+ 		border-right: 0;
+ 	}
+
+ 	#testata > div.menu-accessori{
+ 		float: none;
+ 		position: static;
+ 		width: 100%;
+ 		z-index: 9999999;
+ 		margin-top: 0;
+ 		margin-bottom: 25px;
+ 		border-bottom: 1px solid #f2f2f2;
+ 	}
+
+ 	#menu-sezione > div.menu-servizio{
+ 		float: none;
+ 		margin: 6px -7px 10px -7px;
+ 		line-height: normal;
+ 	}
+ 	#menu-sezione > div.menu-servizio li:before{
+ 		padding-right: 0;
+ 		content: '';
+ 		color: transparent;
+ 	}
+
+ 	#menu-sezione > div.menu-servizio > ul > li{
+ 		float: none;
+ 		text-align: left;
+ 		padding: 7px 0 7px 8px;
+ 		text-transform: capitalize;
+ 	}
+ 	#testata .menu-servizio a,
+ 	#testata .menu-servizio a:visited{
+ 		color: #000;
+ 	}
+ 	#testata .menu-servizio a.evidenza,
+ 	#testata .menu-servizio a.evidenza:visited,
+ 	.evidenzia{
+ 		border: none;
+    	background-color: transparent;
+    	padding: 0;
+ 	}
+
+ 	.dropdown-menu{
+ 		left: 0;
+ 		width: 96%;
+ 	}
+
+ 	.dropdown-menu ul{
+ 		float: none;
+ 		width: auto;
+ 		text-transform: capitalize;
+ 	}
+ 	.dropdown-menu ul li{
+ 		margin: 0 0 0 4%;
+ 	}
+
+ 	.dropdown-close{
+ 		display: none;
+ 	}
+ 	#testata > div.menu-servizio,
+	#testata > div.menu-accessori,
+	#form_di_ricerca > form > p > a.rss > img,
+	#form_di_ricerca > form > p > a.accessibilita > img,
+	#canale-home #colonna-1-2 .focus .focus-container hr,
+	#colonna-1-2 .dipartimento .giustizia-tributaria hr,
+	#colonna-1-2 .dipartimento .documentazione-economica hr,
+	#colonna-1-2 .dipartimento .federalismo-fiscale hr{
+		display: none;
+	}
+
+	header hr.divisorio{
+		border: 1px solid #ebebeb;
+		margin: 0 20px 40px 0;
+		width: 95%;
+	}
+	input#query {
+    	width: 50%;
+	}
+
+	form {
+    	width: 100%;
+	}
+
+	div#form_di_ricerca {
+    	vertical-align: middle;
+    	line-height: 35px;
+    	width: 96%;
+    	margin-left: 2%;
+    	padding-top: 5px;
+	}
+
+	#form_di_ricerca > form {
+    	text-align: center;
+    	background-color: #f2f2f2;
+	}
+	.menu-servizio{
+		margin-top: 10px;
+    	padding-left: 15px;
+    	line-height: 25px;
+    	font-size: 85%;
+	}
+	.menu-servizio ul{
+		list-style-type: none;
+	}
+	.menu-servizio ul li a,
+	.menu-servizio ul li a:visited{
+		color: #000;
+	}
+	#menu-sezione{
+		min-height: 0;
+		height: 0;
+	}
+	.menu-3-hide{
+		display: none;
+	}
+
+	#colonna-1-1{
+		float: none;
+		width: auto;
+	}
+
+	#canale-home #colonna-1-1 #tag-cloud, 
+	#canale-home #colonna-1-1 .studi-analisi,
+	#canale-home #colonna-1-1 .fisco,
+	#canale-home #colonna-1-1 .documentazione{
+		width: auto;
+		float: none;
+	}
+	#canale-home #colonna-1-1 .studi-analisi,
+	#canale-home #colonna-1-1 .documentazione{
+		margin-left: 0;
+	}
+	#colonna-1-2{
+		float: none;
+		width: 100%;
+		margin-top: 20px;
+	}
+
+	#canale-home #colonna-1-2 .giustizia-tributaria,
+	#canale-home #colonna-1-2 .documentazione-economica,
+	#canale-home #colonna-1-2 .federalismo-fiscale{
+		margin: 0 0 0 15px;
+	}
+
+	#canale-home #colonna-1-2 .fisco-container,
+	#canale-home #colonna-1-1 .fisco-container,
+	#canale-home #colonna-1-2 .documentazione-container,
+	#canale-home #colonna-1-1 .documentazione-container{
+		margin: 0 10px 0 10px;
+		width: auto;
+	}
+	#canale-home #colonna-1-2 .focus .focus-container ul li a,
+	#canale-home #colonna-1-2 .fisco .fisco-container ul li a,
+	#canale-home #colonna-1-1 .fisco .fisco-container ul li a,
+	#canale-home #colonna-1-2 .documentazione .documentazione-container ul li a,
+	#canale-home #colonna-1-1 .documentazione .documentazione-container ul li a{
+		background: transparent url(../img/custom/bullet_raquo.png) no-repeat right top 14px;
+	}
+
+	#canale-home #colonna-1-2 .giustizia-tributaria h2,
+	#canale-home #colonna-1-2 .federalismo-fiscale h2{
+		margin-bottom: 27px;
+	}
+	#canale-home #colonna-1-2 .focus .focus-container{
+		margin: 0 0 0 15px;
+	}
+	#canale-home #colonna-1-2 .focus .focus-container p{
+		float: left;
+		margin-right: 10px;
+	}
+
+	#canale-home #colonna-1-2 .focus .focus-container ul{
+		float: left;
+	}
+	
+	#canale-home #colonna-1-2 .focus .focus-container ul li a{
+		text-align: left;
+	}
+
+	#colonna-1 > div.box-container > div.box-1,
+	#colonna-1 > div.box-container > div.box-2{
+		float: none;
+		width: auto;
+	}
+	#colonna-1 > div.box-container > div.box-1{
+		padding-top: 20px;
+	}
+	#colonna-1 > div.box-container > div.box-2{
+		padding-bottom: 20px;
+	}
+	#tag-cloud{
+		padding-bottom: 20px;
+	}
+
+	#back-to-top{
+		text-align: center;
+		margin-top: 30px;
+	}
+	footer{
+		min-width: 310px;
+		margin: 0 auto;
+	}
+	.footerAccordion{
+		background: transparent url(../img/custom/bullet-footer-menu.png) no-repeat 95% center;
+	}
+	.footerAccordion-open{
+		background: transparent url(../img/custom/bullet-footer-menu-open.png) no-repeat 95% center;
+	}
+	#legale div.contatti {
+		background: transparent url(../img/content/contatti-logo.png) no-repeat center bottom;
+    	height: 80px;
+	}
+	#legale div.contatti p{
+		padding: 0 0 0 10px;
+		width: 95%;
+	}
+	.footer-menu{
+		padding-bottom: 30px;
+	}
+	.footer-menu h2{
+		text-align: left;
+		margin: 0 20px 0 30px;
+		padding: 20px 0;
+	}
+	.footer-menu div{
+		display: none;
+		width: 80%;
+		float: none;
+	}
+	.footer-menu p.footer-title{
+		font-size: 85%;
+	}
+	#footer .footer-menu ul li.bullet_raquo{
+    	background: transparent url("../img/custom/bullet_raquo.png") no-repeat scroll left top 3px;
+   	}
+   	#canale-home #colonna-1-1 .titolo ul li{
+   		padding: 5px 0;
+   		width: 33%;
+   		line-height: normal;
+   	}
+   	#canale-home #colonna-1-1 .titolo a,
+   	#canale-home #colonna-1-1 .titolo a:visited{
+   		padding: 0;
+   		display: block;
+   		text-align: center;
+   	}
+   	#canale-home #colonna-1-1 .titolo a.circolari,
+   	#canale-home #colonna-1-1 .titolo a.circolari:visited{
+   		padding-top: 9%;
+   	}
+   	#canale-home #colonna-1-1 .titolo a.focus,
+   	#canale-home #colonna-1-1 .titolo a.in-evidenza,
+   	#canale-home #colonna-1-1 .titolo a.focus:visited,
+   	#canale-home #colonna-1-1 .titolo a.in-evidenza:visited{
+   		padding-top: 15%;
+   	}
+
+
+/* AGGIUNTI/MODIFICATI A PHONE */
+
+ #threeline {
+  float: right;
+  margin: 30px auto;
+  width: 26px; height: 24px;
+  background: transparent url(../img/custom/threeline.png) no-repeat center center;
+  padding: 6px;
+	}
+
+ #threeline.menu-open {
+  background-image: url(../img/custom/close-threeline.png);
+ }
+
+ nav[role=navigation] {
+  position: absolute; left: -10000px; top: auto;
+  display: block;
+  margin-bottom: 20px;
+ }
+
+ nav[role=navigation].menu-open {
+  position: static;
+  background-color: #fff;
+ }
+
+ #menu-sezioni .menu-open .dropdown-menu {
+  position: static;
+ }
+
+ #menu-sezioni .dropdown-menu li {
+  float: none;
+  width: auto;
+  text-align: left;
+ }
+ 
+ /* Modifiche nuovi box generici */
+  .col-1-2 {
+	  width: auto;
+	  float: none;
+	  margin-bottom:  20px;
+  }
+  .col-1-2:first-child {
+	  margin-right: 0;
+  }
+.box-social {
+    margin: 10px 20px;
+    text-align: right;
+}
+.box-social img{
+    margin-right: 10px;
+}
+img.organigramma {
+    border: 1px solid #000;
+    float: none;
+    margin: 10px 0;
+    padding: 2px;
+    text-align:  center;
+}
+}
+
+/* NEW - 25 feb 2016 */
+
+@media only screen and (min-width: 801px) {
+
+ html > body table .field { display: none; }
+
+}
+
+@media only screen and (max-width: 800px) {
+
+ /* Ricerca nel sito */
+
+ html > body #form_di_ricerca { margin: 0px auto; width: auto; }
+ html > body #form_di_ricerca #sq { width: 50%; }
+
+ /* Reset */
+
+ html > body .totale { display: block; float: none; width: auto; margin: 0px auto; padding: 5px; }
+
+ html > body .totale h1,
+ html > body .totale h2,
+ html > body .totale h3,
+ html > body .totale h4,
+ html > body .totale h5 { display: block; float: none; width: auto; margin: 12px auto; padding: 0px; }
+
+ html > body .totale div { display: block; float: none; width: auto; margin: 12px auto; padding: 0px; }
+ html > body .totale p { display: block; float: none; width: auto; margin: 12px auto; padding: 0px; text-align: left; }
+
+ html > body .totale ul,
+ html > body .totale ol { display: block; float: none; margin: 12px 0px 12px 10px; width: auto; padding: 0px 0px 0px 10px; }
+ html > body .totale li { float: none; margin: 5px auto; width: auto; padding: 0px; }
+
+ html > body .totale label { display: block; float: none; width: auto; margin: 12px auto; padding: 0px; text-align: left; }
+
+ html > body .totale input[type=text] { display: block; float: none; margin: 12px auto; width: 94%; background-color: #fff; padding: 8px 3%; }
+ html > body .totale select { display: block; float: none; margin: 12px auto; width: 100%; background-color: #fff; padding: 8px; }
+
+ html > body .totale input[type=submit],
+ html > body .totale input[type=button],
+ html > body .totale input[type=reset],
+ html > body .totale button { float: none; display: block; margin: 12px auto; border: 1px #aaa solid; width: 100%; background-color: #f1f1f1; padding: 8px 0px; color: #434343; }
+
+ html > body .totale map { display: none; }
+ html > body .totale img[usemap] { display: none; }
+
+ html > body .totale br { display: none; }
+
+ /* Tabelle */
+
+ html > body .totale table.nores { float: none; clear: none; display: table; margin: 12px auto; border-collapse: collapse; border-width: 0px; width: 100%; padding: 0px; }
+ html > body .totale table.nores thead,
+ html > body .totale table.nores tbody { display: inherit; float: none; clear: none; width: 100%; }
+ html > body .totale table.nores tr { float: none; clear: none; display: table-row; width: 100%; }
+ html > body .totale table.nores th,
+ html > body .totale table.nores td { float: none; clear: none; display: table-cell; width: auto; padding: 8px 10px; font-weight: normal; text-align: left; vertical-align: top; }
+ html > body .totale table.nores th a,
+ html > body .totale table.nores td a { font-weight: bold; }
+
+ html > body .totale table.nores.tabella2colonne th,
+ html > body .totale table.nores.tabella2colonne td { width: 50%; }
+ html > body .totale table.nores.auto.tabella2colonne th,
+ html > body .totale table.nores.auto.tabella2colonne td { width: auto; }
+
+ html > body .totale table.res { float: none; clear: none; display: table; border-collapse: collapse; margin: 12px auto; padding: 0px; border-width: 0px; margin: 10px 0px; width: 100%; }
+ html > body .totale table.res tr { border: 1px #749eb1 solid; }
+ html > body .totale table.res tr:nth-child(odd) { background-color: #fff; }
+ html > body .totale table.res tr:nth-child(even) { background-color: #d5eaff; }
+ html > body .totale table.res thead { display: none; }
+ html > body .totale table.res tbody { display: block; margin: 0px; width: 100%; }
+ html > body .totale table.res tbody th,
+ html > body .totale table.res tbody td { float: lefT; display: block; clear: both; border-width: 0px; width: 100%; background-color: transparent; padding: 0px; font-weight: normal; text-align: left; vertical-align: top; }
+ html > body .totale table.res tbody th[colspan],
+ html > body .totale table.res tbody td[colspan] { border-width: 0px; background-color: #efefef; padding: 10px 0px; }
+ html > body .totale table.res tbody td .pad { display: block; padding: 0px 10px; }
+ html > body .totale table.res tbody td .field { display: block; float: left; width: 48%; padding: 10px 0px; word-break: break-all; }
+ html > body .totale table.res tbody td .value { display: block; float: right; width: 48%; padding: 10px 0px; word-break: break-all; }
+ html > body .totale table.res th a,
+ html > body .totale table.res td a { font-weight: bold; }
+
+ /* Riadattamenti per classi */
+
+ html > body .totale hr.dividi { margin: 20px auto; }
+
+ /* Affidamento dei beni sequestrati */
+
+ html > body .totale table.pbc_tab1 th { font-size: 100%; vertical-align: middle; }
+ html > body .totale table.pbc_tab1 td { text-align: center; vertical-align: middle; }
+ html > body .totale table.pbc_tab1 th span { display: block; padding-left: 0px; font-size: 80%; }
+ html > body .totale input#pbc_back,
+ html > body .totale input#pbc_submit { margin: 12px auto; width: 100%; }
+
+ /* IUC(IMU-TARI-TASI)/IMI/IMIS */
+
+ html > body .totale .mess > br { display: inline-block; }
+ html > body .totale .testo > br { display: inline-block; }
+ html > body .totale .sinlista > br { display: inline-block; }
+ html > body .totale div.regione { padding: 8px; }
+ html > body .totale div.provincia { padding: 8px; }
+ html > body .totale p.esplica { margin-left: 0px; }
+ html > body .totale .gen .regione div.dx { display: none; }
+ html > body .totale .gen .lista div.dxlista { display: none; }
+ html > body .totale td#com1,
+ html > body .totale td#com2 { padding: 5px 10px; }
+ html > body .totale td#com1 > a,
+ html > body .totale td#com2 > a { font-weight: normal; }
+ html > body .totale a#elenchi { display: block; margin: 12px auto; border: 1px #aaa solid; background-color: #f1f1f1; padding: 5px 0px; font-size: 100%; text-align: center; color: #434343 !important; text-decoration: none !important; }
+ html > body .totale input#sub3 { margin: 12px auto; }
+ html > body .totale p#messout { text-align: left; }
+ html > body .totale table.tabella1 { margin: 12px auto; padding: 0px; }
+ html > body .totale table.tabella1 th,
+ html > body .totale table.tabella1 td { padding: 5px 0px; }
+ html > body .totale table.tabella1 td:nth-child(odd) { display: none; }
+
+}
+
+.card-section {
+  padding-left: 0;  /* Rimuovi eventuali padding a sinistra dalla card *//*
+  overflow: hidden; /* Nasconde il contenuto che esce fuori */
+}
+
+.row.ps-2 {
+  margin-left: 0px; /* Sposta tutta la riga a sinistra */
+}
+
+.col-7 {
+  margin-left: -20px; /* Sposta la colonna del titolo più a sinistra */
+}
+
+.col-auto {
+  margin-left: 0px; /* Aggiusta le colonne successive se necessario */
+}

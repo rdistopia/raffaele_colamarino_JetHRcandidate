@@ -1,0 +1,98 @@
+<div class="card breakdown-card">
+  <div class="card-header">
+    <h3>Scomposizione Dettagliata delle Voci (Breakdown)</h3>
+    <span class="badge">Metodologia Jet HR</span>
+  </div>
+  
+  <table class="breakdown-table">
+    <thead>
+      <tr>
+        <th>Fase / Voce di Calcolo</th>
+        <th>Riferimento / Aliquota</th>
+        <th class="text-right">Importo (€)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="row-highlight">
+        <td><strong>Retribuzione Annua Lorda (RAL)</strong></td>
+        <td>Input Iniziale</td>
+        <td class="text-right"><strong>{{ result.ral|currency }}</strong></td>
+      </tr>
+      
+      <!-- Step 1 -->
+      <tr>
+        <td>&minus; Contributi Previdenziali (IVS Lavoratore)</td>
+        <td>{{ (result.inps_rate * 100)|percent_it }} della RAL</td>
+        <td class="text-right text-danger">&minus; {{ result.inps_contributions|currency }}</td>
+      </tr>
+      <tr class="row-subtotal">
+        <td><strong>= Imponibile Fiscale (Step 1)</strong></td>
+        <td>Base imponibile IRPEF</td>
+        <td class="text-right"><strong>{{ result.taxable_income|currency }}</strong></td>
+      </tr>
+
+      <!-- Step 2: Imposte Lorde -->
+      <tr>
+        <td>&bull; IRPEF Lorda per Scaglioni</td>
+        <td>3 aliquote (23%, 35%, 43%)</td>
+        <td class="text-right">{{ result.irpef_gross|currency }}</td>
+      </tr>
+      {% for b in result.irpef_brackets %}
+      <tr class="row-subitem">
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;&rsaquo; {{ b.label }}</td>
+        <td>{{ b.rate_percent|percent_it }} su {{ b.taxable_amount|currency }}</td>
+        <td class="text-right">{{ b.tax_amount|currency }}</td>
+      </tr>
+      {% endfor %}
+
+      <tr>
+        <td>&bull; Addizionale Regionale ({{ result.region }})</td>
+        <td>Aliquota progressiva a scaglioni</td>
+        <td class="text-right">{{ result.regional_tax|currency }}</td>
+      </tr>
+      <tr>
+        <td>&bull; Addizionale Comunale ({{ result.municipality }})</td>
+        <td>0,8% (quota eccedente esenzione 23.000 €)</td>
+        <td class="text-right">{{ result.municipal_tax|currency }}</td>
+      </tr>
+      <tr class="row-subtotal">
+        <td><strong>Totale Imposta Lorda (Step 2)</strong></td>
+        <td>IRPEF + Addizionali Locali</td>
+        <td class="text-right">{{ result.gross_taxes_total|currency }}</td>
+      </tr>
+
+      <!-- Step 3: Detrazioni -->
+      <tr>
+        <td>&minus; Detrazioni da Lavoro Dipendente (Step 3)</td>
+        <td>Art. 13 TUIR</td>
+        <td class="text-right text-success">&minus; {{ result.deductions_amount|currency }}</td>
+      </tr>
+
+      <!-- Step 4: Imposta Netta -->
+      <tr class="row-subtotal">
+        <td><strong>= Totale Imposte Nette da Pagare (Step 4)</strong></td>
+        <td>Imposta Lorda &minus; Detrazioni</td>
+        <td class="text-right text-danger"><strong>&minus; {{ result.net_tax_effective|currency }}</strong></td>
+      </tr>
+
+      <!-- Step 5: Netto -->
+      <tr class="row-final">
+        <td><strong>Retribuzione Netta Annuale (Step 5)</strong></td>
+        <td>Imponibile Fiscale &minus; Imposta Netta</td>
+        <td class="text-right text-primary"><strong>{{ result.net_annual|currency }}</strong></td>
+      </tr>
+      <tr class="row-monthly">
+        <td><strong>Retribuzione Netta Mensile</strong></td>
+        <td>Rapportato a <strong>{{ result.months }}</strong> mensilità</td>
+        <td class="text-right text-primary"><strong>{{ result.net_monthly|currency }} / mese</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="card-footer-info">
+    <small>
+      * Il netto mensile è una media annualizzata su {{ result.months }} mensilità ordinarie.
+      Trattenute totali rispetto alla RAL: <strong>{{ result.tax_wedge_percent|percent_it(1) }}</strong> ({{ result.total_retained|currency }}).
+    </small>
+  </div>
+</div>

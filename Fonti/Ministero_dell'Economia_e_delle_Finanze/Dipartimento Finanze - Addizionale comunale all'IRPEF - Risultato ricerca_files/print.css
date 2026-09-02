@@ -1,0 +1,9 @@
+.skipheader, .skiplink, .skipcontent,
+#testata .menu-servizio, #testata .menu-accessori,
+#livello-1, #livello-2,
+#colonna-1-2, #colonna-1-3, #colonna-3,
+#footer, #legale ul
+{ display: none; }
+
+#menu-navigazione { border-bottom: 1px #000 solid; padding-bottom: 10px; }
+#legale p { border-top: 1px #000 solid; padding-top: 10px; }
