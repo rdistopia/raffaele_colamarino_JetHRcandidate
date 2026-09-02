@@ -4,12 +4,12 @@
 ---
 
 ### 1. Visione a Lungo Termine e Parametrizzazione Fiscale (Database Modificabile)
-Ho reso il Database completamente modificabile pensando a un utilizzo long-term e considerando le continue variazioni dovute a modifiche alla legislatura (es. riforme IRPEF, manovre di bilancio e aggiornamenti delle addizionali locali). Attraverso l'interfaccia dedicata, ogni parametro, aliquota e scaglione può essere aggiornato direttamente a database senza dover intervenire sul codice applicativo, garantendo continuità e scalabilità del prodotto nel tempo.
+Ho reso il Database completamente modificabile pensando a un utilizzo long-term e considerando le continue variazioni dovute a modifiche alla legislazione / normativa fiscale (es. riforme IRPEF, manovre di bilancio e aggiornamenti delle addizionali locali). Attraverso l'interfaccia dedicata, ogni parametro, aliquota e scaglione può essere aggiornato direttamente a database senza dover intervenire sul codice applicativo, garantendo continuità e scalabilità del prodotto nel tempo.
 
 ---
 
 ### 2. Ricerca Autonoma delle Fonti e Schema di Calcolo
-Per lo sviluppo ho ragionato autonomamente sui requisiti della task e ho personalmente cercato le fonti; vista la vastità dell'argomento e la necessità di utilizzare fonti certe per il motore di calcolo, ho optato per l'utilizzo come fonte primaria dei documenti presenti sul sito di Jet HR alla sezione Help Center, scaricando quelli più inerenti come HTML da estrarre successivamente in un Excel in formato .csv che ne contenesse i parametri necessari al prototipo.  
+Per lo sviluppo ho ragionato autonomamente sui requisiti della task e ho personalmente cercato le fonti; vista la vastità dell'argomento e la necessità di utilizzare fonti certe per il motore di calcolo, ho optato per l'utilizzo come fonte primaria dei documenti presenti sul sito di Jet HR alla sezione Help Center, scaricando quelli più inerenti come HTML da estrarre successivamente nel file `seed_data.json` che ne contenesse i parametri necessari al prototipo.  
 
 Nella cartella `Architettura/` è anche presente lo **Schema di Calcolo** (`schema_di_calcolo_.txt`) su cui si basa il prototipo, anch'esso dedotto e strutturato fedelmente secondo la metodologia documentata nell'Help Center del sito.
 
@@ -100,9 +100,9 @@ Jet_HR/
 ---
 
 ### 4. Scelta dello Stack Tecnologico (Python & PythonAnywhere)
-Ho deciso di utilizzare Python e PythonAnywhere come deployer dato che negli ultimi mesi ho lavorato spesso con questa stack e la sentivo più confident, nonostante sia consapevole di soluzioni più semplici che non richiedono backend, come Vercel. Questa scelta mi ha consentito di strutturare una solida architettura client-server con SQLite locale e API REST integrate.
+Sebbene la traccia lasciasse piena libertà di formato (repo GitHub, folder con documenti o website live), ho scelto deliberatamente di sviluppare un prototipo completo con Python e PythonAnywhere come deployer: negli ultimi mesi ho lavorato spesso con questa stack e la sentivo più confident, nonostante sia consapevole di soluzioni più semplici che non richiedono backend, come Vercel. Questa decisione è stata guidata anche dalla volontà di avere un database modificabile e persistente (SQLite), consentendo di gestire agilmente sia il calcolo da backend sia le API REST integrate.
 
 ---
 
 ### 5. Metodologia di Sviluppo AI-Native e Controlli Incrociati
-L'applicazione è stata vibe-codata utilizzando **Antigravity/Gemini 3.8** e ho applicato controlli incrociati con **Codex** per valutare e risolvere criticamente i punti più delicati (come le discrepanze tra delibere MEF locali e semplificazioni da help center, la gestione dei decimali italiani e la persistenza dinamica degli scaglioni).
+L'applicazione è stata vibe-codata utilizzando **Antigravity / Gemini** e ho applicato controlli incrociati con **Codex** per valutare e risolvere criticamente i punti più delicati (come la gestione dei decimali italiani e la persistenza dinamica degli scaglioni).
