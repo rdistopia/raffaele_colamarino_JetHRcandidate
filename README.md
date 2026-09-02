@@ -100,7 +100,7 @@ Jet_HR/
 ---
 
 ### 4. Scelta dello Stack Tecnologico (Python & PythonAnywhere)
-Sebbene la traccia lasciasse piena libertà di formato (repo GitHub, folder con documenti o website live), ho scelto deliberatamente di sviluppare un prototipo completo con Python e PythonAnywhere come deployer: negli ultimi mesi ho lavorato spesso con questa stack e la sentivo più confident, nonostante sia consapevole di soluzioni più semplici che non richiedono backend, come Vercel. Questa decisione è stata guidata anche dalla volontà di avere un database modificabile e persistente (SQLite), consentendo di gestire agilmente sia il calcolo da backend sia le API REST integrate.
+Sebbene la traccia lasciasse piena libertà di formato (repo GitHub, folder con documenti o website live), ho scelto deliberatamente di sviluppare un prototipo completo con Python e PythonAnywhere come deployer: negli ultimi mesi ho lavorato spesso con questa stack e la sentivo più confident.
 
 ---
 
