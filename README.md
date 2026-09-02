@@ -4,7 +4,7 @@
 ---
 
 ### 1. Visione a Lungo Termine e Parametrizzazione Fiscale (Database Modificabile)
-Ho reso il Database completamente modificabile pensando a un utilizzo long-term e considerando le continue variazioni dovute a modifiche alla legislazione / normativa fiscale (es. riforme IRPEF, manovre di bilancio e aggiornamenti delle addizionali locali). Attraverso l'interfaccia dedicata, ogni parametro, aliquota e scaglione può essere aggiornato direttamente a database senza dover intervenire sul codice applicativo, garantendo continuità e scalabilità del prodotto nel tempo. Infatti le fonti contengono già tutto il necessario per implementare gli altri case (welfare, detrazioni, fringe, tipologie di contratti ecc).
+Ho reso il Database completamente modificabile pensando a un utilizzo long-term e considerando le continue variazioni dovute a modifiche alla legislazione / normativa fiscale (es. riforme IRPEF, manovre di bilancio e aggiornamenti delle addizionali locali). Attraverso l'interfaccia dedicata, ogni parametro, aliquota e scaglione può essere aggiornato direttamente a database senza dover intervenire sul codice applicativo, garantendo continuità e scalabilità del prodotto nel tempo. Infatti le fonti contengono già tutto il necessario per implementare gli altri case (detrazioni, tipologie di contratti ecc).
 
 ---
 
