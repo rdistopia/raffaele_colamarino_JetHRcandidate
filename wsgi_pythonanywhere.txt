@@ -1,0 +1,14 @@
+# ==============================================================================
+# Configurazione WSGI per PythonAnywhere
+# File di destinazione su PythonAnywhere:
+# /var/www/rdistopia_pythonanywhere_com_wsgi.py
+# ==============================================================================
+
+import sys
+import os
+
+path = '/home/rdistopia/raffaele_colamarino_JetHRcandidate'
+if path not in sys.path:
+    sys.path.insert(0, path)
+
+from wsgi import application
