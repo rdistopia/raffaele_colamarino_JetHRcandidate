@@ -1,10 +1,10 @@
 # Jet HR - Calcolatore Retribuzione Netta da RAL
-**Candidatura Product Builder | Raffaele Colamarino**
+**Candidatura AI Builder | Raffaele Colamarino**
 
 ---
 
 ### 1. Visione a Lungo Termine e Parametrizzazione Fiscale (Database Modificabile)
-Ho reso il Database completamente modificabile pensando a un utilizzo long-term e considerando le continue variazioni dovute a modifiche alla legislazione / normativa fiscale (es. riforme IRPEF, manovre di bilancio e aggiornamenti delle addizionali locali). Attraverso l'interfaccia dedicata, ogni parametro, aliquota e scaglione può essere aggiornato direttamente a database senza dover intervenire sul codice applicativo, garantendo continuità e scalabilità del prodotto nel tempo.
+Ho reso il Database completamente modificabile pensando a un utilizzo long-term e considerando le continue variazioni dovute a modifiche alla legislazione / normativa fiscale (es. riforme IRPEF, manovre di bilancio e aggiornamenti delle addizionali locali). Attraverso l'interfaccia dedicata, ogni parametro, aliquota e scaglione può essere aggiornato direttamente a database senza dover intervenire sul codice applicativo, garantendo continuità e scalabilità del prodotto nel tempo. Infatti le fonti contengono già tutto il necessario per implementare gli altri case (welfare, detrazioni, fringe, tipologie di contratti ecc).
 
 ---
 
@@ -100,9 +100,9 @@ Jet_HR/
 ---
 
 ### 4. Scelta dello Stack Tecnologico (Python & PythonAnywhere)
-Sebbene la traccia lasciasse piena libertà di formato (repo GitHub, folder con documenti o website live), ho scelto deliberatamente di sviluppare un prototipo completo con Python e PythonAnywhere come deployer: negli ultimi mesi ho lavorato spesso con questa stack e la sentivo più confident.
+Sebbene la traccia lasciasse piena libertà di formato, ho scelto deliberatamente di sviluppare un prototipo completo con Python e PythonAnywhere come deployer: negli ultimi mesi ho lavorato spesso con questa stack e la sentivo più confident.
 
 ---
 
 ### 5. Metodologia di Sviluppo AI-Native e Controlli Incrociati
-L'applicazione è stata vibe-codata utilizzando **Antigravity / Gemini** e ho applicato controlli incrociati con **Codex** per valutare e risolvere criticamente i punti più delicati (come la gestione dei decimali italiani e la persistenza dinamica degli scaglioni).
+L'applicazione è stata vibe-codata utilizzando **Antigravity / Gemini** e ho applicato controlli incrociati con **Codex** per valutare le scelte di codice associate all'architettura che avevo proposto.
